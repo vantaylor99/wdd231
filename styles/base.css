@@ -1,0 +1,257 @@
+/* ==== Colors === */
+
+:root {
+    --pastel-yellow: #FDFD96;
+    --pastel-purple: #CDB4DB;
+    --pastel-green: #CDEAC0;
+    --pastel-green-darker: #bacfb0;
+    --pastel-blue: #BDE0FE;
+
+    --text: #1f2937;
+    --bg: rgb(131, 131, 131);
+    --bg2: rgb(90, 78, 88);
+    --bg3: rgb(146, 126, 143);
+    --border: #ddd;
+
+    --font: "Montserrat",
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+html,
+body {
+    font-family: var(--font)
+}
+
+main,
+header,
+nav,
+footer {
+    margin: 1rem;
+}
+
+/* ==== Header === */
+
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    margin: 0;
+    padding: 5px 0 10px;
+    align-items: end;
+    border-bottom: solid 4px var(--pastel-yellow);
+    column-gap: 8px;
+    background-color: var(--bg2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-left: 4px;
+}
+
+.logo {
+    width: 3rem;
+    height: auto;
+    padding-left: 1rem;
+}
+
+header span {
+    margin: 0 auto;
+    font-size: 1.2;
+    color: var(--pastel-green);
+    font-family: var(--font);
+}
+
+/* ==== Hamburger Nav === */
+
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--pastel-green);
+    cursor: pointer;
+}
+
+
+.hamburger::before {
+    content: "\2630";
+}
+
+/* 
+.hamburger::after {
+    content: "\2630";
+    font-size: 2rem;
+    
+} */
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/* ==== Body and Cards === */
+body {
+    background-color: var(--bg);
+}
+
+.card {
+    background-color: var(--pastel-green);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 1rem 2rem 1rem;
+}
+
+/* ==== Nav === */
+.navigation {
+    display: none;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--pastel-blue);
+    border-bottom: solid 4px var(--pastel-yellow);
+    margin: 0 auto;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding: 1rem;
+}
+
+
+
+.navigation a {
+    display: block;
+    color: var(--bg2);
+    background-color: var(--pastel-green);
+    text-decoration: none;
+    padding: 0.8rem 10px;
+    border-bottom: solid 2px var(--bg);
+    border-left: solid 2px var(--bg);
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.navigation a[aria-current="page"] {
+    background-color: var(--pastel-green-darker);
+    border-radius: 1rem;
+}
+
+.navigation a:hover {
+    background-color: var(--border);
+    border-inline-start: 3px solid var(--bg3);
+}
+
+/* ==== Home Page Content === */
+.card h2,
+.cart p {
+    margin: 0;
+}
+
+.card h2 {
+    background: var(--pastel-green-darker);
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    border-radius: 1rem;
+    max-width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: solid 3px var(--bg);
+    border-left: solid 3px var(--bg);
+}
+
+.card p {
+    margin-bottom: 0.1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: double 25px var(--pastel-green-darker);
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-top: 1rem;
+}
+
+.card button {
+    color: var(--bg2);
+    background-color: var(--pastel-yellow);
+    border-radius: 0.4rem;
+    border: 2px solid var(--bg2);
+    width: 4rem;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: white;
+}
+
+.classes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: start;
+    align-content: start;
+}
+
+.classes h3 {
+    background-color: var(--bg3);
+    margin: 0;
+    border-radius: 0.5rem;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-bottom: solid 3px var(--bg2);
+    border-left: solid 3px var(--bg2);
+}
+
+.btn-row {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+/* ==== Footer === */
+
+footer a,
+footer li,
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-links li {
+    list-style: none;
+}
+
+.footer-links ul {
+    display: flex;
+}
+
+.footer-links img {
+    width: 4rem;
+    height: auto;
+}
+
+footer p {
+    text-align: center;
+    margin: 3px;
+}
+
+
+.completed {
+    background-color: var(--border);
+}
