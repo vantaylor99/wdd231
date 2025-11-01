@@ -196,6 +196,10 @@ body {
     background-color: white;
 }
 
+.is-hidden {
+    display: none;
+}
+
 .classes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -204,7 +208,8 @@ body {
     align-content: start;
 }
 
-.classes h3 {
+.visible,
+.visible h2 {
     background-color: var(--bg3);
     margin: 0;
     border-radius: 0.5rem;
@@ -214,6 +219,10 @@ body {
     text-align: center;
     border-bottom: solid 3px var(--bg2);
     border-left: solid 3px var(--bg2);
+}
+
+.classes h3.not-taken {
+    background-color: var(--border);
 }
 
 .btn-row {

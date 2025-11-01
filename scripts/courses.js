@@ -37,18 +37,6 @@ const courses = [
         completed: true
     },
     {
-        subject: 'CSE',
-        number: 210,
-        title: 'Programming with Classes',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
-        technology: [
-            'C#'
-        ],
-        completed: true
-    },
-    {
         subject: 'WDD',
         number: 131,
         title: 'Dynamic Web Fundamentals',
@@ -59,6 +47,18 @@ const courses = [
             'HTML',
             'CSS',
             'JavaScript'
+        ],
+        completed: true
+    },
+    {
+        subject: 'CSE',
+        number: 210,
+        title: 'Programming with Classes',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
+        technology: [
+            'C#'
         ],
         completed: true
     },
@@ -74,12 +74,100 @@ const courses = [
             'CSS',
             'JavaScript'
         ],
-        completed: false
+        completed: true
     }
 ]
 
-const allButton = document.querySelector('#all-button')
+
+window.addEventListener('DOMContentLoaded', createCourses);
+
+
+const courseContainer = document.getElementById('course-container')
+const cseClasses = document.querySelectorAll('#cse-class')
+
+function createCourses() {
+    courses.forEach(course => {
+        const courseElement = document.createElement('h3')
+        const courseName = course.subject
+        const courseNumber = course.number
+        const completed = course.completed
+
+
+        courseElement.textContent = `${courseName} ${courseNumber} `;
+        courseContainer.append(courseElement);
+
+        courseElement.classList.add('course');
+        courseElement.dataset.credits = String(course.credits);
+        courseElement.dataset.subject = course.subject;
+
+        // Mark completed classes as completed & add not-taken class if not
+        if (completed) {
+            courseElement.prepend('✔ ')
+        }
+        else {
+            courseElement.classList.add('not-taken')
+        }
+
+
+        // Add classes to each coresponding course
+        if (course.subject == 'CSE') {
+            courseElement.classList.add('cse-course')
+        }
+        if (course.subject == 'WDD') {
+            courseElement.classList.add('wdd-course')
+        }
+        courseElement.classList.add('visible')
+    });
+
+    const creditTotal = document.createElement('h4')
+    creditTotal.id = 'credit-total'
+    creditTotal.textContent = `Total Credits: 0`;
+    courseContainer.append(creditTotal);
+
+    updateCredits();
+}
+
+
+const allButton = document.querySelector('#all-button');
+const cseButton = document.querySelector('#cse-button');
+const wddButton = document.querySelector('#wdd-button');
+
+
 
 allButton.addEventListener('click', () => {
+    const cseCourse = document.querySelectorAll('.cse-course');
+    const wddCourse = document.querySelectorAll('.wdd-course');
 
+    wddCourse.forEach(course => { course.classList.add('visible'), course.classList.remove('is-hidden') });
+    cseCourse.forEach(course => { course.classList.add('visible'), course.classList.remove('is-hidden') });
+    updateCredits();
 })
+
+cseButton.addEventListener('click', () => {
+    const cseCourse = document.querySelectorAll('.cse-course');
+    const wddCourse = document.querySelectorAll('.wdd-course');
+
+    wddCourse.forEach(course => { course.classList.remove('visible'), course.classList.add('is-hidden') });
+    cseCourse.forEach(course => { course.classList.add('visible'), course.classList.remove('is-hidden') });
+    updateCredits();
+})
+
+wddButton.addEventListener('click', () => {
+    const cseCourse = document.querySelectorAll('.cse-course');
+    const wddCourse = document.querySelectorAll('.wdd-course');
+
+    wddCourse.forEach(course => { course.classList.add('visible'), course.classList.remove('is-hidden') });
+    cseCourse.forEach(course => { course.classList.remove('visible'), course.classList.add('is-hidden') });
+    updateCredits();
+})
+
+function updateCredits() {
+    const visible = document.querySelectorAll('.visible');
+
+    const total = [...visible].reduce((sum, el) => {
+        return sum + Number(el.dataset.credits || 0);
+    }, 0);
+
+    const out = document.getElementById('credit-total');
+    if (out) out.textContent = `Total Credits ${total}`;
+}
