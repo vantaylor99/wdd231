@@ -4,7 +4,7 @@
     main,
     nav,
     footer {
-        max-width: 900px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
@@ -29,8 +29,16 @@
         border: none;
     }
 
+    .header-main {
+        margin: 0px auto;
+    }
+
     .card {
-        max-width: 400px;
+        max-width: 600px;
+    }
+
+    .course-card {
+        max-height: 324px;
     }
 
     .home-page {

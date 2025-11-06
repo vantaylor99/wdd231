@@ -15,5 +15,3 @@ navPages.addEventListener('click', () => {
 
 
 const navigation = document.getElementById('nav-bar');
-
-console.log(navigation)

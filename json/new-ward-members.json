@@ -1,0 +1,40 @@
+{
+    "family": {
+        "last-name": "Taylor",
+        "move-in-date": "2022-01-22",
+        "records-in-family": 6,
+        "visited-by-bishopric": false,
+        "family-member-records": [
+            {
+                "full-name": "Jacob Donovan Taylor",
+                "gender": "male",
+                "birthdate": "1999-01-06"
+            },
+            {
+                "full-name": "Kimberly Sandra Caceres Taylor",
+                "gender": "female",
+                "birthdate": "1995-09-12"
+            },
+            {
+                "full-name": "Van Ellis Taylor",
+                "gender": "male",
+                "birthdate": "2025-12-29"
+            },
+            {
+                "full-name": "Syd Teresha Taylor",
+                "gender": "female",
+                "birthdate": "2027-01-18"
+            },
+            {
+                "full-name": "Jayce Mikelle Taylor",
+                "gender": "female",
+                "birthdate": "2028-12-03"
+            },
+            {
+                "full-name": "Nic Kairo Taylor",
+                "gender": "male",
+                "birthdate": "2029-05-11"
+            }
+        ]
+    }
+}

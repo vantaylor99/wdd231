@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Van Taylor">
+    <meta name="description" content="A page to practice fetching data and displaying data dynamically on the page.">
+    <title>Latter-day Prophets</title>
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header class="header-main">
+        <img src="images/svg/van-logo.svg" class="logo" alt="site logo" width="1" height="1">
+        <!-- <img src="images/svg/house-window.svg" alt="Home icon."> -->
+        <span>Van Taylor's Website</span>
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li id="nav-pages" class="nav-pages"><a href="index.html" aria-current="page">Home</a></li>
+            <li id="nav-pages" class="nav-pages"><a href="final.html">Final Project</a></li>
+            <li id="nav-pages" class="nav-pages"><a href="chamber.html">Chamber Project</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1 class="page-title">Latter-day Prophets</h1>
+
+        <div id="cards" class="grid"></div>
+    </main>
+    <footer>
+        Van Taylor | Latter-day Prophets
+    </footer>
+</body>
+<script src="scripts/prophets.js" defer></script>
+
+</html>
