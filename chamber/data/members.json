@@ -1,0 +1,69 @@
+{
+    "Utah City Chamber of Commerce": {
+        "companies": [
+            {
+                "name": "Pollen Sense",
+                "address": "3210 N Canyon Rd Suite 207, Provo, UT 84604",
+                "phone-number": "(385) 853-5151",
+                "website-url": "www.pollensense.com",
+                "image-file-name": "pollen-sense-image",
+                "membership-level": 5,
+                "sponsored-membership": true
+            },
+            {
+                "name": "Utah Tech Innovations",
+                "address": "4500 Innovation Blvd Ste 100, Salt Lake City, UT 84107",
+                "phone-number": "(801) 555-0123",
+                "website-url": "www.utahtechinnovations.com",
+                "image-file-name": "utah-tech-innovations-image",
+                "membership-level": 4,
+                "sponsored-membership": false
+            },
+            {
+                "name": "Green Valley Solar Co.",
+                "address": "220 Solar Way, Orem, UT 84097",
+                "phone-number": "(801) 555-0456",
+                "website-url": "www.greenvalleysolarco.com",
+                "image-file-name": "green-valley-solar-co-image",
+                "membership-level": 3,
+                "sponsored-membership": false
+            },
+            {
+                "name": "Mountain Peak Marketing",
+                "address": "12 Peakview Dr, Park City, UT 84060",
+                "phone-number": "(435) 555-0789",
+                "website-url": "www.mountainpeakmarketing.com",
+                "image-file-name": "mountain-peak-marketing-image",
+                "membership-level": 2,
+                "sponsored-membership": true
+            },
+            {
+                "name": "Clear Water Plumbing Inc.",
+                "address": "99 Aqua Ln, Layton, UT 84041",
+                "phone-number": "(801) 555-1011",
+                "website-url": "www.clearwaterplumbinginc.com",
+                "image-file-name": "clear-water-plumbing-inc-image",
+                "membership-level": 1,
+                "sponsored-membership": false
+            },
+            {
+                "name": "Bright Futures Education Services",
+                "address": "850 Learning Rd, Provo, UT 84601",
+                "phone-number": "(801) 555-1213",
+                "website-url": "www.brightfuturesedu.com",
+                "image-file-name": "bright-futures-education-services-image",
+                "membership-level": 4,
+                "sponsored-membership": true
+            },
+            {
+                "name": "Summit Roofing & Exteriors",
+                "address": "275 Summit Dr, Ogden, UT 84401",
+                "phone-number": "(801) 555-1415",
+                "website-url": "www.summitroofingexteriors.com",
+                "image-file-name": "summit-roofing-exteriors-image",
+                "membership-level": 3,
+                "sponsored-membership": false
+            }
+        ]
+    }
+}

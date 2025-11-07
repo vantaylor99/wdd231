@@ -85,6 +85,10 @@ window.addEventListener('DOMContentLoaded', createCourses);
 const courseContainer = document.getElementById('course-container')
 const cseClasses = document.querySelectorAll('#cse-class')
 
+
+// const cseCourses = courses.filter(course => course.subject === "CSE");
+// const wddCourses = course.filter(course => course.subject === "WDD");
+
 function createCourses() {
     courses.forEach(course => {
         const courseElement = document.createElement('h3')

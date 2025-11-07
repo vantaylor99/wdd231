@@ -1,7 +1,7 @@
 /* ==== Colors === */
 
 :root {
-    --pastel-yellow: #FDFD96;
+    --light-brown: #b59365;
     --pastel-purple: #CDB4DB;
     --pastel-green: #CDEAC0;
     --pastel-green-darker: #bacfb0;
@@ -44,11 +44,13 @@ header {
     grid-template-columns: 24px auto 44px;
     padding: 5px 0 10px;
     align-items: end;
-    border-bottom: solid 4px var(--pastel-yellow);
+    border-bottom: solid 4px var(--light-brown);
     column-gap: 8px;
     background-color: var(--bg2);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+
 
 .page-title {
     color: black;
@@ -70,7 +72,7 @@ header img {
 }
 
 .logo {
-    width: 3rem;
+    width: 4rem;
     height: auto;
     padding-left: 1rem;
 }
@@ -80,6 +82,7 @@ header span {
     font-size: 1.5rem;
     color: var(--pastel-green);
     font-family: var(--font);
+    padding-left: 1rem;
 }
 
 /* ==== Hamburger Nav === */
@@ -94,14 +97,8 @@ header span {
 
 .hamburger::before {
     content: "\2630";
-}
-
-/* 
-.hamburger::after {
-    content: "\2630";
     font-size: 2rem;
-    
-} */
+}
 
 .hamburger.show::before {
     content: "\00D7";
@@ -194,6 +191,11 @@ body {
     margin: 0px;
 }
 
+.header-chamber {
+    margin: 0px auto;
+    grid-template-columns: 4rem auto 3rem 3rem;
+}
+
 .navigation a[aria-current="page"] {
     background-color: var(--pastel-green-darker);
     border-radius: 1rem;
@@ -206,12 +208,10 @@ body {
 }
 
 /* ==== Home Page Content === */
-.card h2,
-.cart p {
-    margin: 0;
-}
 
-.card h2 {
+
+
+h2 {
     background: var(--pastel-green-darker);
     padding: 0.5rem 0.8rem 0.5rem 0.8rem;
     border-radius: 1rem;
@@ -236,8 +236,8 @@ body {
 }
 
 .card button {
-    color: var(--bg2);
-    background-color: var(--pastel-yellow);
+    color: black;
+    background-color: var(--border);
     border-radius: 0.4rem;
     border: 2px solid var(--bg2);
     width: 4rem;
@@ -283,6 +283,29 @@ body {
     justify-content: space-evenly;
     padding: 1rem;
 }
+
+/* === Chamber of Commerce Home Page === */
+
+.keynote-tickets {
+    display: flex;
+}
+
+
+/* === Chamber of Commerce Directory Page === */
+
+.directory-cards {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--pastel-green-darker);
+    border: 1px solid var(--light-brown);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: solid 2px black;
+}
+
+
 
 /* ==== Footer === */
 
