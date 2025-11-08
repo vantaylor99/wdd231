@@ -178,8 +178,8 @@ body {
     background-color: var(--pastel-green);
     text-decoration: none;
     padding: 0.8rem 10px;
-    border-bottom: solid 2px var(--border);
-    border-left: solid 2px var(--border);
+    border-bottom: solid 3px var(--pastel-green-darker);
+    border-left: solid 3px var(--pastel-green-darker);
     border-radius: 1rem;
     text-align: center;
     margin: 0 auto;
