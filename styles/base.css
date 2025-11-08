@@ -120,7 +120,6 @@ body {
     margin: 0.5rem;
     padding: 0.5rem;
     background-color: #B9B9CC;
-    border: 1px solid rgb(0 0 0 / 10%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -278,7 +277,6 @@ h2 {
 
 .btn-row {
     display: flex;
-    justify-content: center;
     justify-content: space-evenly;
     padding: 1rem;
 }
