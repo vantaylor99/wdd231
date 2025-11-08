@@ -293,8 +293,15 @@ h2 {
 
 /* === Chamber of Commerce Directory Page === */
 
+
 .directory-cards {
-    margin: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5rem;
+}
+
+.directory-card {
+    margin: 2rem auto;
     padding: 0.5rem;
     background-color: var(--pastel-green-darker);
     border: 1px solid var(--light-brown);
@@ -303,6 +310,19 @@ h2 {
     align-items: center;
     border-radius: 0.5rem;
     border: solid 2px black;
+    width: 100%;
+}
+
+.directory-card h2 {
+    background-color: var(--light-brown);
+    width: 250px;
+}
+
+.directory-card img {
+    background-color: white;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 8px;
 }
 
 
