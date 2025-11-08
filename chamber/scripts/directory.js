@@ -41,7 +41,7 @@ const displayMembers = (members) => {
         membershipLevel.innerHTML = `<strong>Membership Level:</strong> ${member["membership-level"]}`;
         const isSponsored = member["sponsored-membership"]
         if (isSponsored) {
-            Sponsorship.innerHTML = `<strong>Sponsored by Utah City</strong> ✔`
+            Sponsorship.innerHTML = `<em>Sponsored by U.C.C.C.</em> ✔`
         }
         else {
             Sponsorship.innerHTML = `<em>Not sponsored by Utah City</em>`
@@ -63,3 +63,30 @@ const displayMembers = (members) => {
 
 getMemberData();
 
+// const display = document.querySelector("#directory-card")
+const gridButton = document.getElementById('grid-button');
+const listButton = document.getElementById('list-button');
+
+
+
+console.log(gridButton);
+console.log(listButton);
+
+function showList() {
+    directoryCards.classList.add("directory-cards-list");
+    directoryCards.classList.remove("directory-cards-grid");
+}
+
+function showGrid() {
+    directoryCards.classList.add("directory-cards-grid");
+    directoryCards.classList.remove("directory-cards-list");
+}
+
+
+gridButton.addEventListener("click", () => {
+    showGrid();
+})
+
+listButton.addEventListener("click", () => {
+    showList();
+})

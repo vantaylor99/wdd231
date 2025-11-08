@@ -25,7 +25,7 @@
 
 html,
 body {
-    font-family: var(--font)
+    font-family: var(--font);
 }
 
 
@@ -165,8 +165,7 @@ body {
 }
 
 .navigation ul {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
     list-style: none;
     padding: 1rem;
 }
@@ -263,7 +262,7 @@ h2 {
 .visible,
 .visible h2 {
     background-color: var(--bg3);
-    margin: 0;
+    margin: 0px;
     border-radius: 0.5rem;
     padding: 10px;
     width: auto;
@@ -294,26 +293,74 @@ h2 {
 /* === Chamber of Commerce Directory Page === */
 
 
-.directory-cards {
+#directory-cards.directory-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    gap: 2rem;
 }
+
+#directory-cards.directory-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#directory-cards.directory-cards-list .directory-card {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    align-items: center;
+    margin: 0px;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+}
+
+#directory-cards.directory-cards-list .directory-card img {
+    display: none;
+}
+
+#directory-cards.directory-cards-list .directory-card h2 {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 10px;
+    justify-self: end;
+    text-align: right;
+}
+
+#directory-cards.directory-cards-list .directory-card .information-div {
+    display: block;
+    border-left: 3px solid black;
+    padding-left: 10px;
+    background-color: var(--pastel-green);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-right: 5px solid var(--pastel-green-darker);
+    border-bottom: 4px solid var(--pastel-green-darker);
+    box-shadow: 1px 3px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+
 
 .directory-card {
     margin: 2rem auto;
+    margin-bottom: 0px;
+    margin-top: 5px;
     padding: 0.5rem;
     background-color: var(--pastel-green-darker);
-    border: 1px solid var(--light-brown);
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 0.5rem;
     border: solid 2px black;
-    width: 100%;
+    width: 95%;
 }
 
 .directory-card h2 {
+    margin-top: 0.5rem;
     background-color: var(--light-brown);
     width: 250px;
 }
@@ -323,6 +370,23 @@ h2 {
     border-radius: 1rem;
     margin: 1rem;
     padding: 8px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.grid-button,
+.list-button {
+    background-color: var(--bg);
+    border: none;
+
+}
+
+
+button img {
+    padding-top: 1rem;
+    width: 3rem;
+    height: auto;
+    cursor: pointer;
 }
 
 
