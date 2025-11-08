@@ -370,8 +370,6 @@ h2 {
     border-radius: 1rem;
     margin: 1rem;
     padding: 8px;
-    overflow-clip-margin: content-box;
-    overflow: clip;
 }
 
 .grid-button,
