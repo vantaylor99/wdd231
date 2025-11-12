@@ -283,8 +283,97 @@ h2 {
 
 /* === Chamber of Commerce Home Page === */
 
-.keynote-tickets {
-    display: flex;
+.keynote-hero {
+    max-width: 1200px;
+    position: relative;
+}
+
+.keynote-hero h2 {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    bottom: 3rem;
+    background-color: var(--pastel-green-darker);
+    font-size: 1.2rem;
+    border: none;
+}
+
+.keynote-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    border-bottom: solid 5px var(--bg2);
+    border-left: solid 5px var(--bg2);
+}
+
+.join-container {
+    display: block;
+    background-color: #bacfb0;
+    border-radius: 5px;
+    border-right: solid 4px var(--pastel-green-darkest);
+    border-bottom: solid 4px var(--pastel-green-darkest);
+    margin-bottom: 1rem;
+}
+
+.join-container h2 {
+    background-color: var(--pastel-green);
+    border-radius: 5px;
+    border-left: solid 4px var(--pastel-green-darkest);
+    border-bottom: solid 4px var(--pastel-green-darkest);
+    margin-top: 1rem;
+    margin-left: 0px;
+    padding: 10px;
+
+}
+
+.join-container h3 {
+    margin-left: 0;
+    width: fit-content;
+    padding: 8px;
+    text-decoration-line: underline;
+    padding-top: 0px;
+}
+
+.join-container p {
+    padding-left: 10px;
+}
+
+.join-container button {
+    background-color: var(--pastel-green-darkest);
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+.join-container button:hover {
+    background-color: var(--bg);
+}
+
+.events h2 {
+    margin-bottom: 1rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    background-color: var(--bg3);
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.event-item {
+    border: solid 1px black;
+    border-radius: 1rem;
+    background-color: var(--pastel-green-darker);
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
 
 

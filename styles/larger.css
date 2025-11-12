@@ -1,11 +1,13 @@
 @media only screen and (min-width: 38rem) {
 
-    header,
+
+
     main,
+    header,
     nav,
     footer {
+        margin: 1rem;
         max-width: 1200px;
-        margin: 0 auto;
     }
 
     header {
@@ -49,5 +51,15 @@
     .photo-card {
         grid-row: span 2;
     }
+
+    .keynote-hero h2 {
+        bottom: 3rem;
+        font-size: 1.5rem;
+        width: fit-content;
+        height: auto;
+        text-wrap: nowrap;
+    }
+
+
 
 }
