@@ -6,7 +6,7 @@
     header,
     nav,
     footer {
-        margin: 1rem;
+        margin: 1rem auto;
         max-width: 1200px;
     }
 
@@ -58,6 +58,7 @@
         width: fit-content;
         height: auto;
         text-wrap: nowrap;
+        margin: 0 auto;
     }
 
 

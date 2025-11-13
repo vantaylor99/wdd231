@@ -27,6 +27,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
 
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/getdates.js" defer></script>
+    <script type="module" src="scripts/weather.mjs"></script>
+    <script type="module" src="scripts/displayweather.mjs"></script>
+    <script type="module" src="scripts/apiFetch.mjs"></script>
+
+
+
 
 </head>
 
@@ -120,10 +128,40 @@
         </section>
 
         <section class="current-weather">
-            <div class="current-weather-container">
-                <h2>weather api key: 94437e1ca6e81a4381596c5a26524264</h2>
+            <div class="current-weather-col1">
+                <h2>Current Weather</h2>
+                <img id="weather-icon" src="" alt="">
+                <figcaption></figcaption>
+            </div>
+            <div class="current-weather-col2">
+                <h3 class="temperature">Vineyard Utah is currently <span id="current-temp"></span><span
+                        id="unit"></span>.
+                </h3>
+                <p><strong>High: </strong><span id="high"></span></p>
+                <p><strong>Low: </strong><span id="low"></span></p>
+                <p><strong>Humidity: </strong><span id="humidity"></span></p>
+                <p><strong>Sunrise: </strong><span id="sunrise"></span></p>
+                <p><strong>Sunset: </strong><span id="sunset"></span></p>
             </div>
         </section>
+
+
+
+
+        <!-- 
+<h1>OpenWeatherMap.org API Test</h1>
+<script type="module" src="scripts/weather.mjs"></script>
+<main>
+    <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
+    <figure>
+        <img id="weather-icon" src="" alt="">
+        <figcaption></figcaption>
+    </figure>
+</main>
+<footer>
+    Van Taylor | OpenWeatherMap.org | CC BY-SA 4.0
+</footer> 
+-->
 
         <section class="weather-forecast">
             <div class="weather-forecast-container">
@@ -186,8 +224,7 @@
         </div>
 
     </footer>
-    <script src="../scripts/navigation.js" defer></script>
-    <script src="../scripts/getdates.js"></script>
+
 </body>
 
 </html>

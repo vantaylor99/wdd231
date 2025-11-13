@@ -1,11 +1,10 @@
-import { displayResults } from "./displayweather.mjs";
-
 export async function apiFetch(url) {
     try {
         const response = await fetch(url);
         if (response.ok) {
             console.log(response)
             const data = await response.json()
+            console.log(data);
             return data;
         }
         else {

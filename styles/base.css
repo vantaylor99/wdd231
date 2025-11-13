@@ -376,6 +376,32 @@ h2 {
     padding: 0.5rem;
 }
 
+.current-weather {
+    display: flex;
+    max-width: 600px;
+}
+
+.current-weather-col1,
+.current-weather-col2 {
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: var(--border);
+    border-radius: 1rem;
+    border-left: 3px solid rgb(167, 164, 164);
+    border-bottom: 3px solid rgb(167, 164, 164);
+}
+
+
+.current-weather-col2 p,
+.current-weather-col2 h3 {
+    margin-top: 0px;
+}
+
+.temperature {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
 
 /* === Chamber of Commerce Directory Page === */
 
