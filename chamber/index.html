@@ -32,6 +32,8 @@
     <script type="module" src="scripts/weather.mjs"></script>
     <script type="module" src="scripts/displayweather.mjs"></script>
     <script type="module" src="scripts/apiFetch.mjs"></script>
+    <script type="module" src="scripts/timeConversion.mjs"></script>
+
 
 
 
@@ -127,21 +129,32 @@
             </div>
         </section>
 
-        <section class="current-weather">
+        <section class="weather">
             <div class="current-weather-col1">
                 <h2>Current Weather</h2>
                 <img id="weather-icon" src="" alt="">
                 <figcaption></figcaption>
             </div>
             <div class="current-weather-col2">
-                <h3 class="temperature">Vineyard Utah is currently <span id="current-temp"></span><span
-                        id="unit"></span>.
+                <h3 class="temperature">Vineyard Utah is currently <span id="current-temp"></span><span id="unit"
+                        class="unit"></span>.
                 </h3>
-                <p><strong>High: </strong><span id="high"></span></p>
-                <p><strong>Low: </strong><span id="low"></span></p>
-                <p><strong>Humidity: </strong><span id="humidity"></span></p>
+                <p><strong>High: </strong><span id="high"></span><span class="unit"></span></p>
+                <p><strong>Low: </strong><span id="low"></span><span class="unit"></span></p>
+                <p><strong>Humidity: </strong><span id="humidity"></span>%</p>
                 <p><strong>Sunrise: </strong><span id="sunrise"></span></p>
                 <p><strong>Sunset: </strong><span id="sunset"></span></p>
+            </div>
+        </section>
+        <section class="forecast">
+            <div class="weather-forecast-col1">
+                <h2>3 Day Forecast</h2>
+                <p class="forecast-lines"><strong><span id="forecastDate1"></span>: </strong> <span
+                        id="forecastDay1"></span><span class="unit"></span> with <span id="descriptionDay1"></span>.</p>
+                <p class="forecast-lines"><strong><span id="forecastDate2"></span>: </strong> <span
+                        id="forecastDay2"></span><span class="unit"></span> with <span id="descriptionDay2"></span>.</p>
+                <p class="forecast-lines"><strong><span id="forecastDate3"></span>: </strong> <span
+                        id="forecastDay3"></span><span class="unit"></span> with <span id="descriptionDay3"></span>.</p>
             </div>
         </section>
 
@@ -162,12 +175,6 @@
     Van Taylor | OpenWeatherMap.org | CC BY-SA 4.0
 </footer> 
 -->
-
-        <section class="weather-forecast">
-            <div class="weather-forecast-container">
-                <h2>weather-forecast</h2>
-            </div>
-        </section>
 
         <!-- Businesses -->
         <section>
