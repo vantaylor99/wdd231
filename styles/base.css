@@ -201,14 +201,11 @@ body {
 }
 
 .navigation a:hover {
-    background-color: var(--bg2);
-    border-inline-start: 3px solid var(--bg3);
-    color: white;
+    background-color: var(--bg);
     transition: background-color 200ms ease, color 200ms ease;
 }
 
 /* ==== Home Page Content === */
-
 
 
 h2 {
@@ -421,15 +418,24 @@ figcaption {
 }
 
 .forecast {
-    margin: 0.5rem auto;
+    margin: 0px auto;
     background-color: var(--border);
     border-radius: 1rem;
-    padding: 1rem;
     border-bottom: solid 2px #1f2937;
     border-left: solid 2px #1f2937;
-    max-width: 600px;
+    max-width: 586px;
 }
 
+.forecast div p {
+    width: fit-content;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.weather-forecast {
+    padding-top: 1rem;
+    margin: 0.5rem;
+}
 
 /* === Chamber of Commerce Directory Page === */
 

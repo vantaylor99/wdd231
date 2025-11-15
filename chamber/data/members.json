@@ -7,7 +7,7 @@
                 "phone-number": "(385) 853-5151",
                 "website-url": "www.pollensense.com",
                 "image-file-name": "pollen-sense-image",
-                "membership-level": 5,
+                "membership-level": "Gold",
                 "sponsored-membership": true
             },
             {
@@ -16,7 +16,7 @@
                 "phone-number": "(801) 555-0123",
                 "website-url": "www.utahtechinnovations.com",
                 "image-file-name": "utah-tech-innovations-image",
-                "membership-level": 4,
+                "membership-level": "Silver",
                 "sponsored-membership": false
             },
             {
@@ -25,7 +25,7 @@
                 "phone-number": "(801) 555-0456",
                 "website-url": "www.greenvalleysolarco.com",
                 "image-file-name": "green-valley-solar-co-image",
-                "membership-level": 3,
+                "membership-level": "Bronze",
                 "sponsored-membership": false
             },
             {
@@ -34,7 +34,7 @@
                 "phone-number": "(435) 555-0789",
                 "website-url": "www.mountainpeakmarketing.com",
                 "image-file-name": "mountain-peak-marketing-image",
-                "membership-level": 2,
+                "membership-level": "Elite Member",
                 "sponsored-membership": true
             },
             {
@@ -43,7 +43,7 @@
                 "phone-number": "(801) 555-1011",
                 "website-url": "www.clearwaterplumbinginc.com",
                 "image-file-name": "clear-water-plumbing-inc-image",
-                "membership-level": 1,
+                "membership-level": "Base Member",
                 "sponsored-membership": false
             },
             {
@@ -52,7 +52,7 @@
                 "phone-number": "(801) 555-1213",
                 "website-url": "www.brightfuturesedu.com",
                 "image-file-name": "bright-futures-education-services-image",
-                "membership-level": 4,
+                "membership-level": "Silver",
                 "sponsored-membership": true
             },
             {
@@ -61,7 +61,7 @@
                 "phone-number": "(801) 555-1415",
                 "website-url": "www.summitroofingexteriors.com",
                 "image-file-name": "summit-roofing-exteriors-image",
-                "membership-level": 3,
+                "membership-level": "Bronze",
                 "sponsored-membership": false
             }
         ]
