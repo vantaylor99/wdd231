@@ -393,6 +393,7 @@ figcaption {
     background-color: #e7e7e7;
     border-bottom: 2px solid black;
     border-radius: 1rem;
+    padding: 0.5rem;
 }
 
 .current-weather-col1,
@@ -435,6 +436,10 @@ figcaption {
 .weather-forecast {
     padding-top: 1rem;
     margin: 0.5rem;
+}
+
+.spotlight-business {
+    margin-top: 1rem;
 }
 
 /* === Chamber of Commerce Directory Page === */

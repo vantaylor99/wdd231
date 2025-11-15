@@ -33,6 +33,8 @@
     <script type="module" src="scripts/displayweather.mjs"></script>
     <script type="module" src="scripts/apiFetch.mjs"></script>
     <script type="module" src="scripts/timeConversion.mjs"></script>
+    <script type="module" src="scripts/displayBusinesses.mjs"></script>
+
 
 
 
@@ -158,35 +160,17 @@
             </div>
         </section>
 
-
-
-
-        <!-- 
-<h1>OpenWeatherMap.org API Test</h1>
-<script type="module" src="scripts/weather.mjs"></script>
-<main>
-    <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
-    <figure>
-        <img id="weather-icon" src="" alt="">
-        <figcaption></figcaption>
-    </figure>
-</main>
-<footer>
-    Van Taylor | OpenWeatherMap.org | CC BY-SA 4.0
-</footer> 
--->
-
         <!-- Businesses -->
         <section>
-            <div class="business-card">
-                <h1>Business Name</h1>
-                <span>Business Tag Line</span>
+            <div class="spotlight-business">
+                <h2>Spotlight on <span id="spotlight-business"></span></h2>
+                <p><strong>Address: </strong><span id="spotlight-address"></span></p>
                 <div>
-                    <img src="#" alt="business photo place holder 1">
+                    <img src="" alt="" id="spotlight-image">
                     <div class="business-card-info">
-                        <p><strong>Email: </strong>info@gmail.com</p>
-                        <p><strong>Phone: </strong>(800)-555-1234</p>
-                        <p><strong>URL: </strong>mybusiness.com</p>
+                        <p><strong>Email: </strong><span id="spotlight-email"></span></p>
+                        <p><strong>Phone: </strong><span id="spotlight-phone"></span></p>
+                        <p><strong>URL: </strong><span id="spotlight-url"></span></p>
                     </div>
                 </div>
             </div>

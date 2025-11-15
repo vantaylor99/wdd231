@@ -42,11 +42,3 @@ const forecastData = await apiFetch(forecastURL);
 
 displayWeatherResults(weatherData, weatherElements);
 displayForecastResults(forecastData, forecastElements);
-
-
-window.onLoad = () => {
-    console.log("onload fired.");
-
-    displayWeatherResults(weatherData, weatherElements);
-    displayForecastResults(forecastData, forecastElements);
-};

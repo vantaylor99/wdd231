@@ -87,10 +87,6 @@ export function displayForecastResults(
     forecastDay1.textContent = Math.ceil(data.list[3].main.temp);
     descriptionDay1.textContent = data.list[3].weather[0].description;
 
-    console.log("forecastDay1 element:", forecastDay1);
-    console.log("descriptionDay1 element:", descriptionDay1);
-
-
     forecastDate2.textContent = `${usDateConversion(data.list[11].dt)} ${usTimeConversion(data.list[11].dt)}`;
     forecastDay2.textContent = Math.ceil(data.list[11].main.temp);
     descriptionDay2.textContent = data.list[11].weather[0].description
