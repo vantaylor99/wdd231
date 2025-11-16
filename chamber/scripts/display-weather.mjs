@@ -1,5 +1,5 @@
-import { usTimeConversion } from "./timeConversion.mjs";
-import { usDateConversion } from "./timeConversion.mjs";
+import { usTimeConversion } from "./time-conversion.mjs";
+import { usDateConversion } from "./time-conversion.mjs";
 
 export function displayWeatherResults(
     data,

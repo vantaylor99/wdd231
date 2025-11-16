@@ -1,5 +1,5 @@
-import { apiFetch } from "./apiFetch.mjs";
-import { getRandomIndicies } from "./randomIndicies.mjs";
+import { apiFetch } from "./api-fetch.mjs";
+import { getRandomIndicies } from "./random-indicies.mjs";
 
 const url = 'https://vantaylor99.github.io/wdd231/chamber/data/members.json';
 const businessData = await apiFetch(url);
