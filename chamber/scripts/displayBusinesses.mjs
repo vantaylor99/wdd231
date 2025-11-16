@@ -1,4 +1,5 @@
 import { apiFetch } from "./apiFetch.mjs";
+import { getRandomIndicies } from "./randomIndicies.mjs";
 
 const url = 'https://vantaylor99.github.io/wdd231/chamber/data/members.json';
 const businessData = await apiFetch(url);
@@ -10,44 +11,32 @@ const spotlightEmail = document.getElementById("spotlightEmail");
 const spotlightPhone = document.getElementById("spotlightPhone");
 const spotlightURL = document.getElementById("spotlightURL");
 
-const premiumBusiness = document.getElementById('premiumBusiness');
-const premiumAddress = document.getElementById('premiumAddress');
-
-const premiumImage = document.getElementById("premiumImage");
-const premiumEmail = document.getElementById("premiumEmail");
-const premiumPhone = document.getElementById("premiumPhone");
-const premiumURL = document.getElementById("premiumURL");
-
-
-console.log(businessData)
-console.log(spotlightImage)
-
-// console.log(spotlightAddress)
-
 
 function displayRanomBusiness() {
-    let randomNumber = Math.floor(Math.random() * 7);
-    spotlightBusiness.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].name;
-    spotlightAddress.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].address;
+    let randomNumber1 = Math.floor(Math.random() * 7);
+    spotlightBusiness.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber1].name;
+    spotlightAddress.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber1].address;
 
     // image
-    const filePath = businessData["Utah City Chamber of Commerce"].companies[randomNumber].imageFileName
+    const filePath = businessData["Utah City Chamber of Commerce"].companies[randomNumber1].imageFileName
     spotlightImage.setAttribute('src', `images/company-images/${filePath}.png`);
-    spotlightImage.setAttribute('alt', `Logo for ${businessData["Utah City Chamber of Commerce"].companies[randomNumber].name}, a local business in Vineyard.`);
+    spotlightImage.setAttribute('alt', `Logo for ${businessData["Utah City Chamber of Commerce"].companies[randomNumber1].name}, a local business in Vineyard.`);
     spotlightImage.setAttribute('loading', 'lazy');
     spotlightImage.setAttribute('width', '300');
     spotlightImage.setAttribute('height', 'auto');
 
-    spotlightEmail.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].email;
-    spotlightPhone.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].phone;
-    spotlightURL.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].websiteURL;
+    spotlightEmail.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber1].email;
+    spotlightPhone.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber1].phone;
+    spotlightURL.setAttribute('href', businessData["Utah City Chamber of Commerce"].companies[randomNumber1].websiteURL);
+    spotlightURL.innerHTML = `${businessData["Utah City Chamber of Commerce"].companies[randomNumber1].websiteURL}`;
 }
 displayRanomBusiness();
 
 
+
+
 function displayPremiumBusinesses() {
     const businessAray = businessData["Utah City Chamber of Commerce"].companies;
-    console.log(businessAray);
     const premiumBusinessArray = [];
     businessAray.forEach(business => {
         if (business.membershipLevel === "Gold" || business.membershipLevel === "Silver") {
@@ -55,7 +44,53 @@ function displayPremiumBusinesses() {
         }
 
     });
-    console.log(premiumBusinessArray)
+
+    const arrayLength = premiumBusinessArray.length
+    const randomIndicies = getRandomIndicies(3, arrayLength)
+
+    const premiumBusinessesToShow = [];
+    premiumBusinessesToShow.push(premiumBusinessArray[randomIndicies[0]])
+    premiumBusinessesToShow.push(premiumBusinessArray[randomIndicies[1]])
+    premiumBusinessesToShow.push(premiumBusinessArray[randomIndicies[2]])
+
+    console.log(premiumBusinessesToShow)
+
+    premiumBusinessesToShow.forEach(premiumBusiness => {
+        const businessSection = document.getElementById('businesses');
+        let premiumBusinessDiv = document.createElement('div');
+        premiumBusinessDiv.classList.add('premium-business')
+        let premiumBusinessName = document.createElement('h2');
+        let premiumBusinessAddress = document.createElement('p');
+        let premiumBusinessImage = document.createElement("img");
+        let premiumBusinessEmail = document.createElement("p");
+        let premiumBusinessPhone = document.createElement("p");
+        let premiumBusinessURL = document.createElement("p");
+
+
+
+
+        premiumBusinessName.innerHTML = `${premiumBusiness.name};`
+        premiumBusinessAddress.innerHTML = `<strong>Address: </strong>${premiumBusiness.address}`;
+        premiumBusinessEmail.innerHTML = `<strong>Email: </strong>${premiumBusiness.email}`;
+        premiumBusinessPhone.innerHTML = `<strong>Phone: </strong>${premiumBusiness.phone}`;
+        premiumBusinessURL.innerHTML = `<strong>Website: </strong><a href="${premiumBusiness.websiteURL}">${premiumBusiness.websiteURL}`;
+
+        // Image
+        premiumBusinessImage.setAttribute('src', `images/company-images/${premiumBusiness.imageFileName}.png`)
+        premiumBusinessImage.setAttribute('loading', 'lazy')
+        premiumBusinessImage.setAttribute('width', '300')
+        premiumBusinessImage.setAttribute('height', 'auto')
+
+
+
+        businessSection.append(premiumBusinessDiv);
+        premiumBusinessDiv.append(premiumBusinessName)
+        premiumBusinessDiv.append(premiumBusinessAddress)
+        premiumBusinessDiv.append(premiumBusinessImage)
+        premiumBusinessDiv.append(premiumBusinessEmail)
+        premiumBusinessDiv.append(premiumBusinessPhone)
+        premiumBusinessDiv.append(premiumBusinessURL)
+    });
 }
 
 displayPremiumBusinesses()

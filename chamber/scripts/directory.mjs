@@ -36,7 +36,7 @@ const displayMembers = (members) => {
 
         address.innerHTML = `<strong>Address: </strong>${member.address}`
         phoneNumber.innerHTML = `<strong>Phone: </strong>${member["phone-number"]}`;
-        websiteUrl.innerHTML = `<strong>Website: </strong>${member["website-url"]}`;
+        websiteUrl.innerHTML = `<strong>Website: </strong> ${member["websiteURL"]}`;
 
         membershipLevel.innerHTML = `<strong>Membership Level:</strong> ${member["membership-level"]}`;
         const isSponsored = member["sponsored-membership"]
