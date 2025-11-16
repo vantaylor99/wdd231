@@ -392,6 +392,10 @@ h2 {
     margin: 0 auto;
 }
 
+figure {
+    margin: 0px;
+}
+
 figcaption {
     font-size: 200%;
     text-align: center;
