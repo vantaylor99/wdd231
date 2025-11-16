@@ -19,12 +19,23 @@ function displayRanomBusiness() {
     let randomNumber = Math.floor(Math.random() * 7);
     console.log(randomNumber)
 
-    spotlightBusiness.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].name;
-    spotlightAddress.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].address;
+    const jsonPath = 'businessData["Utah City Chamber of Commerce"].companies[randomNumber]';
+
+    spotlightBusiness.textContent = jsonPath.name;
+    spotlightAddress.textContent = jsonPath.address;
 
     // image
-    // spotlightImage.setAttribute('alt') = `Logo for ${businessData["Utah City Chamber of Commerce"].companies[randomNumber].name}, a local business in Vineyard.`
-    spotlightImage.setAttribute('src') = businessData["Utah City Chamber of Commerce"].companies[randomNumber].image - file - name;
+    // spotlightImage.setAttribute('src', jsonPath.imageFileName);
+    // spotlightImage.setAttribute('alt', `Logo for ${jsonPath.name}, a local business in Vineyard.`);
+    // spotlightImage.setAttribute('loading', 'lazy');
+    // spotlightImage.setAttribute('width', '300');
+    // spotlightImage.setAttribute('height', 'auto');
+
+    // spotlightEmail.textContent = jsonPath.address;
+    // spotlightPhone.textContent = jsonPath.phone; 
+    // spotlightURL.textContent = jsonPath.URL;
+
+
 
 
 
