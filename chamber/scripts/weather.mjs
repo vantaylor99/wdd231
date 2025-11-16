@@ -1,5 +1,5 @@
-import { apiFetch } from "./apiFetch.mjs";
-import { displayForecastResults, displayWeatherResults } from "./displayweather.mjs";
+import { apiFetch } from "./api-fetch.mjs";
+import { displayForecastResults, displayWeatherResults } from "./display-weather.mjs";
 
 const weatherElements =
 {
