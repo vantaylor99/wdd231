@@ -8,7 +8,8 @@
                 "websiteURL": "www.pollensense.com",
                 "imageFileName": "pollen-sense-image",
                 "membershipLevel": "Gold",
-                "sponsored-membership": true
+                "sponsored-membership": true,
+                "email": "info@pollensense.com"
             },
             {
                 "name": "Utah Tech Innovations",
@@ -17,7 +18,8 @@
                 "websiteURL": "www.utahtechinnovations.com",
                 "imageFileName": "utah-tech-innovations-image",
                 "membershipLevel": "Silver",
-                "sponsored-membership": false
+                "sponsored-membership": false,
+                "email": "info@utahtechinnovations.com"
             },
             {
                 "name": "Green Valley C&H",
@@ -25,8 +27,9 @@
                 "phone": "(801) 555-0456",
                 "websiteURL": "www.greenvalleysolarco.com",
                 "imageFileName": "green-valley-solar-co-image",
-                "membershipLevel": "Bronze",
-                "sponsored-membership": false
+                "membershipLevel": "Gold",
+                "sponsored-membership": false,
+                "email": "info@greenvalleysolarco.com"
             },
             {
                 "name": "Mountain Peak Marketing",
@@ -34,8 +37,9 @@
                 "phone": "(435) 555-0789",
                 "websiteURL": "www.mountainpeakmarketing.com",
                 "imageFileName": "mountain-peak-marketing-image",
-                "membershipLevel": "Elite Member",
-                "sponsored-membership": true
+                "membershipLevel": "Silver",
+                "sponsored-membership": true,
+                "email": "info@mountainpeakmarketing.com"
             },
             {
                 "name": "Clear Water Plumbing Inc.",
@@ -43,8 +47,9 @@
                 "phone": "(801) 555-1011",
                 "websiteURL": "www.clearwaterplumbinginc.com",
                 "imageFileName": "clear-water-plumbing-inc-image",
-                "membershipLevel": "Base Member",
-                "sponsored-membership": false
+                "membershipLevel": "Gold",
+                "sponsored-membership": false,
+                "email": "info@clearwaterplumbinginc.com"
             },
             {
                 "name": "Bright Futures Education Services",
@@ -53,7 +58,8 @@
                 "websiteURL": "www.brightfuturesedu.com",
                 "imageFileName": "bright-futures-education-services-image",
                 "membershipLevel": "Silver",
-                "sponsored-membership": true
+                "sponsored-membership": true,
+                "email": "info@brightfuturesedu.com"
             },
             {
                 "name": "Summit Roofing & Exteriors",
@@ -62,7 +68,8 @@
                 "websiteURL": "www.summitroofingexteriors.com",
                 "imageFileName": "summit-roofing-exteriors-image",
                 "membershipLevel": "Bronze",
-                "sponsored-membership": false
+                "sponsored-membership": false,
+                "email": "info@summitroofingexteriors.com"
             }
         ]
     }

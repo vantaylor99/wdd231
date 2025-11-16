@@ -21,7 +21,7 @@ const displayMembers = (members) => {
         let websiteUrl = document.createElement('a');
         let membershipLevel = document.createElement('p');
         let Sponsorship = document.createElement('p');
-        let logoPath = member["image-file-name"];
+        let logoPath = member.imageFileName;
         let infoDiv = document.createElement('div');
         infoDiv.classList.add('information-div');
         card.classList.add('directory-card');
