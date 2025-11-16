@@ -10,20 +10,29 @@ const spotlightEmail = document.getElementById("spotlightEmail");
 const spotlightPhone = document.getElementById("spotlightPhone");
 const spotlightURL = document.getElementById("spotlightURL");
 
+const premiumBusiness = document.getElementById('premiumBusiness');
+const premiumAddress = document.getElementById('premiumAddress');
+
+const premiumImage = document.getElementById("premiumImage");
+const premiumEmail = document.getElementById("premiumEmail");
+const premiumPhone = document.getElementById("premiumPhone");
+const premiumURL = document.getElementById("premiumURL");
+
+
 console.log(businessData)
+console.log(spotlightImage)
+
 // console.log(spotlightAddress)
 
 
 function displayRanomBusiness() {
     let randomNumber = Math.floor(Math.random() * 7);
-    console.log(randomNumber)
-
-
     spotlightBusiness.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].name;
     spotlightAddress.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].address;
 
     // image
-    spotlightImage.setAttribute('src', businessData["Utah City Chamber of Commerce"].companies[randomNumber].imageFileName);
+    const filePath = businessData["Utah City Chamber of Commerce"].companies[randomNumber].imageFileName
+    spotlightImage.setAttribute('src', `images/company-images/${filePath}.png`);
     spotlightImage.setAttribute('alt', `Logo for ${businessData["Utah City Chamber of Commerce"].companies[randomNumber].name}, a local business in Vineyard.`);
     spotlightImage.setAttribute('loading', 'lazy');
     spotlightImage.setAttribute('width', '300');
@@ -31,14 +40,22 @@ function displayRanomBusiness() {
 
     spotlightEmail.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].email;
     spotlightPhone.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].phone;
-    spotlightURL.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].URL;
+    spotlightURL.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber].websiteURL;
+}
+displayRanomBusiness();
 
 
+function displayPremiumBusinesses() {
+    const businessAray = businessData["Utah City Chamber of Commerce"].companies;
+    console.log(businessAray);
+    const premiumBusinessArray = [];
+    businessAray.forEach(business => {
+        if (business.membershipLevel === "Gold" || business.membershipLevel === "Silver") {
+            premiumBusinessArray.push(business);
+        }
 
-
-
-
-
+    });
+    console.log(premiumBusinessArray)
 }
 
-displayRanomBusiness()
+displayPremiumBusinesses()
