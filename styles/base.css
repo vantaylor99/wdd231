@@ -318,7 +318,11 @@ h2 {
     border-radius: 5px;
     border-right: solid 4px var(--pastel-green-darkest);
     border-bottom: solid 4px var(--pastel-green-darkest);
+    padding-bottom: 1rem;
+    padding-top: 0.2rem;
+    padding-left: 0.7rem;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .join-container h2 {
@@ -344,7 +348,7 @@ h2 {
     padding-left: 10px;
 }
 
-.join-container button {
+.join-container a {
     background-color: var(--pastel-green-darkest);
     border: 1px solid black;
     padding: 0.5rem;
@@ -355,7 +359,7 @@ h2 {
     transition: background-color 200ms ease, color 200ms ease;
 }
 
-.join-container button:hover {
+.join-container a:hover {
     background-color: var(--bg);
 }
 
