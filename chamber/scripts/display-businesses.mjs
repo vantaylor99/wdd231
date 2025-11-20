@@ -69,7 +69,7 @@ function displayPremiumBusinesses() {
 
 
 
-        premiumBusinessName.innerHTML = `${premiumBusiness.name};`
+        premiumBusinessName.innerHTML = `${premiumBusiness.name}`;
         premiumBusinessAddress.innerHTML = `<strong>Address: </strong>${premiumBusiness.address}`;
         premiumBusinessEmail.innerHTML = `<strong>Email: </strong>${premiumBusiness.email}`;
         premiumBusinessPhone.innerHTML = `<strong>Phone: </strong>${premiumBusiness.phone}`;

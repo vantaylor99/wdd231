@@ -74,7 +74,7 @@ export const courses = [
             'CSS',
             'JavaScript'
         ],
-        completed: true
+        completed: false
     }
 ]
 
@@ -121,6 +121,7 @@ function createCourses() {
             courseElement.classList.add('wdd-course')
         }
         courseElement.classList.add('visible')
+        courseElement.classList.add('button-common')
     });
 
     const creditTotal = document.createElement('h4')
