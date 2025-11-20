@@ -15,7 +15,6 @@ const modalTechnology = document.createElement('p');
 
 
 
-console.log(classes);
 
 classes.addEventListener('click', (event) => {
     const button = event.target.closest('.course');
