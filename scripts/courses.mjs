@@ -1,4 +1,4 @@
-const courses = [
+export const courses = [
     {
         subject: 'CSE',
         number: 110,
@@ -91,7 +91,7 @@ const cseClasses = document.querySelectorAll('#cse-class')
 
 function createCourses() {
     courses.forEach(course => {
-        const courseElement = document.createElement('h3')
+        const courseElement = document.createElement('button')
         const courseName = course.subject
         const courseNumber = course.number
         const completed = course.completed
@@ -101,8 +101,8 @@ function createCourses() {
         courseContainer.append(courseElement);
 
         courseElement.classList.add('course');
+        courseElement.dataset.classID = (`${course.subject}${course.number}`);
         courseElement.dataset.credits = String(course.credits);
-        courseElement.dataset.subject = course.subject;
 
         // Mark completed classes as completed & add not-taken class if not
         if (completed) {

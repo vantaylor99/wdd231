@@ -237,6 +237,7 @@ h2 {
     padding-top: 1rem;
 }
 
+/* 
 .card button {
     color: black;
     background-color: var(--border);
@@ -244,15 +245,30 @@ h2 {
     border: 2px solid var(--bg2);
     width: 4rem;
     cursor: pointer;
+} */
 
+.button-common:hover,
+.card button:hover {
+    background-color: var(--bg);
 }
 
-.card button:hover {
-    background-color: white;
+.button-common {
+    background-color: var(--pastel-green-darkest);
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 200ms ease, color 200ms ease;
 }
 
 .is-hidden {
     display: none;
+}
+
+.course-dialog {
+    display: block;
 }
 
 .classes {
@@ -263,8 +279,8 @@ h2 {
     align-content: start;
 }
 
-.visible,
-.visible h2 {
+
+.course {
     background-color: var(--bg3);
     margin: 0px;
     border-radius: 0.5rem;
@@ -274,6 +290,7 @@ h2 {
     text-align: center;
     border-bottom: solid 3px var(--bg2);
     border-left: solid 3px var(--bg2);
+    transition: background-color 200ms ease, color 200ms ease;
 }
 
 .classes h3.not-taken {
@@ -284,6 +301,37 @@ h2 {
     display: flex;
     justify-content: space-evenly;
     padding: 1rem;
+}
+
+.course-header {
+    display: flex;
+    background-color: var(--bg3);
+    padding: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+dialog {
+    width: 400px;
+    height: fit-content;
+    background-color: var(--border);
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgb(0, 0, 0 / 50%);
+    padding: 20px;
+
+}
+
+dialog button {
+    width: 2srem;
+    height: auto;
+    font-size: 1rem;
+    padding: 0px;
+}
+
+dialog::backdrop {
+    background-color: rgb(0, 0, 0 / 50%);
+    backdrop-filter: blur(10px);
 }
 
 /* === Chamber of Commerce Home Page === */
@@ -578,7 +626,6 @@ figcaption {
 .list-button {
     background-color: var(--bg);
     border: none;
-
 }
 
 
