@@ -61,39 +61,43 @@
             <form action="thankyou.html" method="get" class="join-form">
                 <label>
                     First Name:
-                    <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+                    <input type="text" id="firstName" name="firstName" autocomplete="given-name" required
+                        title="Enter your First Name.">
                 </label>
 
                 <label>
                     Last Name:
-                    <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+                    <input type="text" id="lastName" name="lastName" autocomplete="family-name" required
+                        title="Enter your Last Name">
                 </label>
 
                 <label>
                     Title:
                     <input type="text" id="title" name="title" autocomplete="organization-title"
-                        pattern="[A-Za-z\s\-]{7,}">
+                        pattern="[A-Za-z\s\-]{7,}" title="Enter your Title">
                 </label>
 
                 <label>
                     Email:
                     <input type="email" id="email" name="email" autocomplete="email" required
-                        placeholder="e.g. name@gmail.com">
+                        placeholder="e.g. name@gmail.com" title="Enter your Email">
                 </label>
 
                 <label>
                     Phone:
-                    <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" required
+                        title="Enter your Phone Number">
                 </label>
 
                 <label>
                     Business:
-                    <input type="text" id="business" name="business" autocomplete="organization" required>
+                    <input type="text" id="business" name="business" autocomplete="organization" required
+                        title="Enter your Business Name">
                 </label>
 
                 <label>
                     Membership Level:
-                    <select name="membershipLevel" id="membershipLevel">
+                    <select name="membershipLevel" id="membershipLevel" title="Select your Membership Level.">
                         <option value="" disabled selected hidden>--Please choose an option--</option>
                         <option value="np-membership">Non Profit</option>
                         <option value="bronze">Bronze</option>
@@ -105,10 +109,12 @@
                 <label>
                     Describe your business / organization:
                     <textarea name="businessDescription" id="businessDescription"
-                        title="Describe your business or organization" rows="4"></textarea>
+                        title="Describe your business or organization" rows="4"
+                        title="Use this box to describe your business."></textarea>
                 </label>
                 <input type="hidden" name="timeStamp" id="timeStamp">
-                <input type="submit" value="Join" class="button-dark" id="form-submission">
+                <input type="submit" value="Join" class="button-dark" id="form-submission"
+                    title="Submit your information.">
             </form>
 
 
