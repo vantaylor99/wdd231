@@ -334,7 +334,7 @@ dialog {
 }
 
 dialog button {
-    width: 2srem;
+    width: 2rem;
     height: auto;
     font-size: 1rem;
     padding: 0px;
@@ -458,7 +458,7 @@ figcaption {
 .current-weather-col2 {
     margin: 0.5rem;
     padding: 1rem;
-    background-color: var(--border);
+    background-color: var(--primary-light);
     border-radius: 1rem;
     border-left: 3px solid rgb(167, 164, 164);
     border-bottom: 3px solid rgb(167, 164, 164);
@@ -654,31 +654,92 @@ button img {
     text-align: center;
 }
 
-.gold {
-    border-top: solid 8px var(--accent);
-    border-left: solid 8px var(--accent);
-    box-shadow: 5px -5px 0.5rem 1px rgb(0 0 0 / 50%);
-}
+/* === Membership Tiers === */
 
-.silver {
-    border-top: solid 8px silver;
-    border-left: solid 8px silver;
+.non-profit {
+    border-top: solid 8px rosybrown;
+    border-left: solid 8px rosybrown;
     box-shadow: 5px -5px 0.5rem 1px rgb(0 0 0 / 50%);
+    opacity: 0;
+    animation: fadeRiseIn 0.4s ease-out forwards;
+    animation-delay: 0.90s;
 }
 
 .bronze {
     border-top: solid 8px burlywood;
     border-left: solid 8px burlywood;
     box-shadow: 5px -5px 0.5rem 1px rgb(0 0 0 / 50%);
-
+    opacity: 0;
+    animation: fadeRiseIn 0.4s ease-out forwards;
+    animation-delay: 0.60s;
 }
 
-.non-profit {
-    border-top: solid 8px rosybrown;
-    border-left: solid 8px rosybrown;
+.silver {
+    border-top: solid 8px silver;
+    border-left: solid 8px silver;
     box-shadow: 5px -5px 0.5rem 1px rgb(0 0 0 / 50%);
+    opacity: 0;
+    animation: fadeRiseIn 0.4s ease-out forwards;
+    animation-delay: 0.30s;
 }
 
+.gold {
+    border-top: solid 8px var(--accent);
+    border-left: solid 8px var(--accent);
+    border-bottom: solid 8px var(--accent);
+    border-radius: 1rem;
+    box-shadow: 5px -5px 0.5rem 1px rgb(0 0 0 / 50%);
+    animation: fadeRiseIn 0.4s ease-out forwards;
+    animation-delay: 0s;
+}
+
+.np-button {
+    border: 3px solid rosybrown;
+}
+
+.bronze-button {
+    border: 3px solid burlywood;
+}
+
+.silver-button {
+    border: 3px solid silver;
+}
+
+.gold-button {
+    border: 3px solid var(--accent);
+}
+
+/* === Membership Animations */
+
+@keyframes fadeRiseIn {
+    0% {
+        opacity: 0%;
+        transform: translateY(120px);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+/* === Membership Dialog Boxes === */
+
+.membership-header {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-dark);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.membership-header h2 {
+    text-decoration: underline;
+}
+
+.membership-header button {
+    margin-top: 10px;
+}
 
 .join-content {
     display: flex;
@@ -710,7 +771,15 @@ label {
     margin: 0.3rem;
 }
 
+/* === Thank you Page === */
 
+.results-div {
+    background-color: var(--primary-light);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    box-shadow: 0px 0px 15px 8px var(--primary);
+}
 
 /* ==== Footer === */
 

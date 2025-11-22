@@ -3,32 +3,41 @@ import { getRandomIndicies } from "./random-indicies.mjs";
 
 const url = 'https://vantaylor99.github.io/wdd231/chamber/data/members.json';
 const businessData = await apiFetch(url);
-const spotlightBusiness = document.getElementById('spotlightBusiness');
+const spotlightBusinessElement = document.getElementById('spotlightBusiness');
 const spotlightAddress = document.getElementById('spotlightAddress');
 
 const spotlightImage = document.getElementById("spotlightImage");
 const spotlightEmail = document.getElementById("spotlightEmail");
 const spotlightPhone = document.getElementById("spotlightPhone");
 const spotlightURL = document.getElementById("spotlightURL");
+const businessAray = businessData["Utah City Chamber of Commerce"].companies;
+let randomNumber1 = Math.floor(Math.random() * businessAray.length);
+let spotlightBusiness = businessAray[randomNumber1];
+
+console.log(randomNumber1)
+console.log(businessAray)
+
+businessAray.splice(randomNumber1, 1)
+console.log(businessAray)
+
 
 
 function displayRanomBusiness() {
-    let randomNumber1 = Math.floor(Math.random() * 7);
-    spotlightBusiness.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber1].name;
-    spotlightAddress.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber1].address;
+    spotlightBusinessElement.textContent = spotlightBusiness.name;
+    spotlightAddress.textContent = spotlightBusiness.address;
 
     // image
-    const filePath = businessData["Utah City Chamber of Commerce"].companies[randomNumber1].imageFileName
+    const filePath = spotlightBusiness.imageFileName
     spotlightImage.setAttribute('src', `images/company-images/${filePath}.png`);
-    spotlightImage.setAttribute('alt', `Logo for ${businessData["Utah City Chamber of Commerce"].companies[randomNumber1].name}, a local business in Vineyard.`);
+    spotlightImage.setAttribute('alt', `Logo for ${spotlightBusiness.name}, a local business in Vineyard.`);
     spotlightImage.setAttribute('loading', 'lazy');
     spotlightImage.setAttribute('width', '300');
     spotlightImage.setAttribute('height', 'auto');
 
-    spotlightEmail.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber1].email;
-    spotlightPhone.textContent = businessData["Utah City Chamber of Commerce"].companies[randomNumber1].phone;
-    spotlightURL.setAttribute('href', businessData["Utah City Chamber of Commerce"].companies[randomNumber1].websiteURL);
-    spotlightURL.innerHTML = `${businessData["Utah City Chamber of Commerce"].companies[randomNumber1].websiteURL}`;
+    spotlightEmail.textContent = spotlightBusiness.email;
+    spotlightPhone.textContent = spotlightBusiness.phone;
+    spotlightURL.setAttribute('href', spotlightBusiness.websiteURL);
+    spotlightURL.innerHTML = `${spotlightBusiness.websiteURL}`;
 }
 displayRanomBusiness();
 
@@ -36,7 +45,6 @@ displayRanomBusiness();
 
 
 function displayPremiumBusinesses() {
-    const businessAray = businessData["Utah City Chamber of Commerce"].companies;
     const premiumBusinessArray = [];
     businessAray.forEach(business => {
         if (business.membershipLevel === "Gold" || business.membershipLevel === "Silver") {
@@ -73,7 +81,7 @@ function displayPremiumBusinesses() {
         premiumBusinessAddress.innerHTML = `<strong>Address: </strong>${premiumBusiness.address}`;
         premiumBusinessEmail.innerHTML = `<strong>Email: </strong>${premiumBusiness.email}`;
         premiumBusinessPhone.innerHTML = `<strong>Phone: </strong>${premiumBusiness.phone}`;
-        premiumBusinessURL.innerHTML = `<strong>Website: </strong><a href="${premiumBusiness.websiteURL}">${premiumBusiness.websiteURL}`;
+        premiumBusinessURL.innerHTML = `<strong>Website: </strong><a href="${premiumBusiness.websiteURL}">${premiumBusiness.websiteURL}</a>`;
 
         // Image
         premiumBusinessImage.setAttribute('src', `images/company-images/${premiumBusiness.imageFileName}.png`)

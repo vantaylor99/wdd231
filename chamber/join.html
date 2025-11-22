@@ -31,6 +31,7 @@
     <script src="../scripts/navigation.js" defer></script>
     <script src="../scripts/getdates.js" defer></script>
     <script src="scripts/modal.js" defer></script>
+    <script src="scripts/get-form-submission-date.js" defer></script>
 
 </head>
 
@@ -107,26 +108,29 @@
                         title="Describe your business or organization" rows="4"></textarea>
                 </label>
                 <input type="hidden" name="timeStamp" id="timeStamp">
-                <input type="submit" value="Join" class="button-dark">
+                <input type="submit" value="Join" class="button-dark" id="form-submission">
             </form>
 
 
             <div class="modal-cards" id="modal-cards">
-                <div class="non-profit membership" data-membershipId="np-membership">
+                <div class="non-profit membership">
                     <h3>Non Profit Membership Level</h3>
-                    <button class="button-dark">Learn More</button>
+                    <button class="button-dark np-button" data-membershipId="np-membership"><span>Learn
+                            More</span></button>
                 </div>
-                <div class="bronze membership" data-membershipId="bronze">
+                <div class="bronze membership">
                     <h3>Bronze Membership Level</h3>
-                    <button class="button-dark">Learn More</button>
+                    <button class="button-dark bronze-button" data-membershipId="bronze"><span>Learn
+                            More</span></button>
                 </div>
-                <div class="silver membership" data-membershipId="silver">
+                <div class="silver membership">
                     <h3>Silver Membership Level</h3>
-                    <button class="button-dark">Learn More</button>
+                    <button class="button-dark silver-button" data-membershipId="silver"><span>Learn
+                            More</span></button>
                 </div>
-                <div class="gold membership" data-membershipId="gold">
+                <div class="gold membership">
                     <h3>Gold Membership Level</h3>
-                    <button class="button-dark">Learn More</button>
+                    <button class="button-dark gold-button" data-membershipId="gold"><span>Learn More</span></button>
                 </div>
             </div>
         </section>
