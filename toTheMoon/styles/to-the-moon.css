@@ -1,0 +1,90 @@
+:root {
+
+    --background-dark: #1B263B;
+    --background-light: #F0FBFD;
+    --accent-1: #C8F5F9;
+    --accent-2: #FCE68F;
+    --money-green1: #A3D181;
+    --money-green2: #387E4D;
+    --text-light: #E7E9EB;
+
+
+
+
+
+
+    /*             <p class="background"><strong>Background: </strong>#1B263B</p>
+            <p class="light-background"><strong>Light Background Sections: </strong>#F0FBFD</p>
+            <p class="accent-1"><strong>Accent 1: </strong>#C8F5F9</p>
+            <p class="accent-2"><strong>Accent 2: </strong>#FCE68F</p>
+            <p class="money-green1"><strong>Money Green 1: </strong>#A3D181</p>
+            <p class="money-green2"><strong>Money Green 2: </strong>#387E4D</p>
+            <p class="text-light"><strong>Text Light: </strong>#E7E9EB</p> */
+
+
+    --font: "Montserrat",
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+html,
+body {
+    font-family: var(--font);
+    margin: 1rem;
+}
+
+.background-dark {
+    padding: 1rem;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    border: solid 3px black;
+    border-radius: 1rem;
+}
+
+.background-light {
+    padding: 1rem;
+    background-color: var(--background-light);
+    border: solid 3px black;
+    border-radius: 1rem;
+}
+
+.accent-1 {
+    padding: 1rem;
+    background-color: var(--accent-1);
+    border: solid 3px black;
+    border-radius: 1rem;
+}
+
+.accent-2 {
+    padding: 1rem;
+    background-color: var(--accent-2);
+    border: solid 3px black;
+    border-radius: 1rem;
+}
+
+.money-green1 {
+    padding: 1rem;
+    background-color: var(--money-green1);
+    border: solid 3px black;
+    border-radius: 1rem;
+}
+
+.money-green2 {
+    padding: 1rem;
+    background-color: var(--money-green2);
+    color: var(--text-light);
+    border: solid 3px black;
+    border-radius: 1rem;
+}
+
+.text-light {
+    padding: 1rem;
+    background-color: var(--text-light);
+    border: solid 3px black;
+    border-radius: 1rem;
+}
