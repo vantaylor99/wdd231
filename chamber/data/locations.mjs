@@ -7,7 +7,7 @@ export const locations = [
         filePath: "images/webp/topgolf.webp"
     },
     {
-        name: "Megaplex Theatres at Geneva (IMAX)",
+        name: "Megaplex Theatres",
         address: "600 N Mill Rd, Vineyard, UT 84058",
         description:
             "Vineyard's main movie theater featuring IMAX, luxury seating, and a wide selection of new releases. Located in the Geneva shopping area.",
@@ -28,7 +28,7 @@ export const locations = [
         filePath: "images/webp/coconut-cove.webp"
     },
     {
-        name: "J. Rulon Gammon Vineyard Heritage Park",
+        name: "Heritage Park",
         address: "70 S Holdaway Rd, Vineyard, UT 84059",
         description:
             "A large community park with playgrounds, sports courts, open fields, and mountain views. Ideal for families and outdoor recreation.",

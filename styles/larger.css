@@ -71,15 +71,20 @@
 
     }
 
+    #locationSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     .location-card {
         border-radius: 1rem;
         padding: 0.5rem;
         display: grid;
         grid-template-areas:
-            "name"
-            "photo"
-            "address"
-            "description";
+            "photo name"
+            "photo address"
+            "photo description"
+            "button";
     }
 
 }

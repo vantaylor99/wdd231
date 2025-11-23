@@ -31,7 +31,7 @@ function displayLocations() {
 
         locationAddress.textContent = `${loc.address}`;
         locationDescription.textContent = `${loc.description}`;
-        locationButton.classList.add("button-common");
+        locationButton.classList.add("button-dark");
         locationButton.textContent = `Learn more!`;
 
 
