@@ -2,7 +2,7 @@
 
 // const dateToday = new Date();
 const msToDays = 86400000;
-const todayMs = Math.floor(Date.now());
+const todayMs = Date.now();
 
 function setLastVisit() {
     localStorage.setItem("lastVisit", Date.now())
@@ -21,7 +21,7 @@ function getLastVisit() {
         return Number(lastVisit);
     }
 }
-const lastVisitDays = (Math.floor(getLastVisit() / msToDays)) - todayMs;
+const daysSince = Math.floor(((todayMs - getLastVisit()) / msToDays));
 
 
-console.log(lastVisitDays);
+console.log(daysSince);
