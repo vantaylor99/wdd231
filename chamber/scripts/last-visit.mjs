@@ -2,18 +2,18 @@
 
 // const dateToday = new Date();
 const msToDays = 86400000;
-// const todayMs = Date.now();
+const todayMs = Math.floor(Date.now());
 
 function setLastVisit() {
     localStorage.setItem("lastVisit", Date.now())
 }
-setLastVisit()
+
 
 function getLastVisit() {
     let lastVisit = localStorage.getItem("lastVisit");
 
     if (!lastVisit) {
-        localStorage.setItem("lastVisit", Date.now());
+        setLastVisit()
         lastVisit = localStorage.getItem("lastVisit");
         return Number(lastVisit);
     }
@@ -21,5 +21,7 @@ function getLastVisit() {
         return Number(lastVisit);
     }
 }
-const lastVisitDays = Math.floor(getLastVisit());
+const lastVisitDays = (Math.floor(getLastVisit() / msToDays)) - todayMs;
+
+
 console.log(lastVisitDays);
