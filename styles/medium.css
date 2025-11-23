@@ -1,4 +1,4 @@
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 38rem) {
 
 
 
@@ -72,14 +72,17 @@
     }
 
     .location-card {
-        border-radius: 1rem;
         padding: 0.5rem;
-        display: grid;
         grid-template-areas:
-            "name"
-            "photo"
-            "address"
-            "description";
+            "photo name"
+            "photo address"
+            "photo description";
+    }
+
+    .location-card p,
+    .location-card address {
+        padding-left: 1rem;
+        padding-top: 1rem;
     }
 
 }

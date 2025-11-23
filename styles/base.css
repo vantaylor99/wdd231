@@ -781,6 +781,53 @@ label {
     box-shadow: 0px 0px 15px 8px var(--primary);
 }
 
+/* === Discovery Page === */
+
+.location-card {
+    background-color: var(--primary-light);
+    margin: 1rem 8px;
+    border: 3px solid var(--primary-dark);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-areas:
+        "name"
+        "photo"
+        "address"
+        "description";
+}
+
+.location-card h2 {
+    grid-area: name;
+}
+
+.location-card figure {
+    grid-area: photo;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+}
+
+.location-card img {
+    grid-area: photo;
+    width: 100%;
+    margin: 0px;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.location-card address {
+    grid-area: address;
+}
+
+.location-card p {
+    grid-area: description;
+}
+
+
+
+
+
 /* ==== Footer === */
 
 footer a,
