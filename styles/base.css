@@ -834,6 +834,28 @@ label {
     grid-area: button;
 }
 
+.welcome-popup {
+    display: none;
+    grid-template-columns: 1fr auto 1fr;
+    background-color: var(--border);
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-popup h3 {
+    grid-column: 2;
+    margin: 0;
+    text-align: center;
+}
+
+.welcome-popup button {
+    grid-column: 3;
+    justify-self: end;
+}
+
 
 
 
