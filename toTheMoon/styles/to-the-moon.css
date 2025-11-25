@@ -32,10 +32,19 @@
         sans-serif;
 }
 
-html,
 body {
+    margin: 0 auto;
+}
+
+nav,
+main,
+footer {
+    margin: 0.5rem;
+}
+
+html {
     font-family: var(--font);
-    margin: 1rem;
+    background-color: var(--background-light);
 }
 
 .background-dark {
@@ -87,4 +96,42 @@ body {
     background-color: var(--text-light);
     border: solid 3px black;
     border-radius: 1rem;
+}
+
+.main-title {
+    background-color: var(--background-dark);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0.5rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-areas:
+        "logo home comparisons history blank"
+        "logo btc-price btc-price btc-price btc-price";
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.nav-page-home {
+    grid-area: home;
+}
+
+.nav-page-comparisons {
+    grid-area: comparisons;
+}
+
+.nav-page-history {
+    grid-area: history;
+}
+
+.btc-price {
+    grid-area: btc-price;
 }
