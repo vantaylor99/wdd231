@@ -1,0 +1,97 @@
+@media only screen and (min-width: 38rem) {
+
+
+
+    main,
+    header,
+    nav,
+    footer {
+        margin: 1rem auto;
+        max-width: 1200px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    header {
+        grid-template-columns: 24px auto;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .navigation a {
+        border: none;
+    }
+
+    .header-main {
+        margin: 0px auto;
+    }
+
+    .card {
+        max-width: 600px;
+    }
+
+    .course-card {
+        max-height: 324px;
+    }
+
+    .home-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photo-card {
+        grid-row: span 2;
+    }
+
+    .keynote-hero h2 {
+        bottom: 3rem;
+        font-size: 1.5rem;
+        width: fit-content;
+        height: auto;
+        text-wrap: nowrap;
+        margin: 0 auto;
+    }
+
+    .join-content {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        padding: 1rem;
+        gap: 4rem;
+
+    }
+
+    .location-card {
+        padding: 0.5rem;
+        grid-template-areas:
+            "photo name"
+            "photo address"
+            "photo description"
+            "button button";
+    }
+
+    .location-card p,
+    .location-card address {
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    .location-card img:hover {
+        transition: filter 200ms ease, color 200ms ease;
+    }
+
+    .location-card img:hover {
+        filter: blur(3px);
+    }
+
+}

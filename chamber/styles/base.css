@@ -1,0 +1,893 @@
+/* ==== Colors === */
+
+:root {
+    /* Primary Colors */
+    --accent: #F2D388;
+    --primary: #89A8A2;
+    --primary-dark: #2F5D62;
+    --primary-light: #CADFCE;
+
+
+    /* Background and Border */
+    --bg: #F6F7F4;
+    --border: #ddd;
+
+
+    /* Text Colors */
+    --text-dark: #1E1E1E;
+    --text-light: #FFFF;
+
+
+    --font: "Montserrat",
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+html,
+body {
+    font-family: var(--font);
+}
+
+
+main,
+header,
+nav,
+footer {
+    margin: 1rem;
+    min-width: 300px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+
+/* ==== Header === */
+
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 10px;
+    align-items: end;
+    border-bottom: solid 4px var(--accent);
+    column-gap: 8px;
+    background-color: var(--primary-dark);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.site-header {
+    color: var(--bg);
+}
+
+.page-title {
+    color: white;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    background-color: var(--primary-dark);
+    max-width: fit-content;
+    border-bottom: 8px solid var(--primary);
+    border-left: 8px solid var(--primary);
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-left: 4px;
+}
+
+.logo {
+    width: 4rem;
+    height: auto;
+    padding-left: 1rem;
+}
+
+header span {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-family: var(--font);
+    padding-left: 1rem;
+}
+
+/* ==== Hamburger Nav === */
+
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--primary-light);
+    cursor: pointer;
+}
+
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/* ==== Body and Cards === */
+body {
+    background-color: var(--bg);
+}
+
+.card {
+    background-color: var(--primary);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 1rem 2rem 1rem;
+}
+
+.prophet-card {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #B9B9CC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    border: solid 2px black;
+}
+
+.prophet-card img {
+    box-shadow: 0 0 1rem 0 black;
+    margin: 1rem;
+}
+
+.prophet-card h2 {
+    color: #4D4D96;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+
+
+.prophet-card p {
+    margin: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* ==== Nav === */
+.navigation {
+    display: none;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--primary);
+    border-bottom: solid 4px var(--primary);
+    margin: 0 auto;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    margin: 0px;
+    list-style: none;
+    padding: 1rem;
+}
+
+
+
+.navigation a {
+    display: block;
+    color: var(--text-dark);
+    background-color: var(--primary-light);
+    padding: 0.8rem 10px;
+    border-bottom: solid 3px var(--primary-dark);
+    border-left: solid 3px var(--primary-dark);
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.header-main {
+    margin: 0px;
+}
+
+.header-chamber {
+    margin: 0px auto;
+    grid-template-columns: 4rem auto 3rem 3rem;
+}
+
+.navigation a[aria-current="page"] {
+    background-color: var(--accent);
+    border-radius: 1rem;
+}
+
+.navigation a:hover {
+    background-color: var(--bg);
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* ==== Home Page Content === */
+
+
+h2 {
+    background: var(--primary-dark);
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    border-radius: 1rem;
+    max-width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: solid 3px var(--primary-dark);
+    border-left: solid 3px var(--primary-dark);
+    color: var(--text-light);
+}
+
+.card p {
+    margin-bottom: 0.1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: double 25px var(--primary-dark);
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-top: 1rem;
+}
+
+.button-common {
+    background-color: var(--primary-light);
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 250ms ease, color 250ms ease;
+}
+
+.button-common:hover {
+    background-color: var(--bg);
+}
+
+
+.button-dark {
+    background-color: var(--primary-dark);
+    color: white;
+    border: 3px solid var(--primary);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 250ms ease, color 250ms ease;
+}
+
+.button-dark:hover {
+    background-color: var(--primary);
+}
+
+.is-hidden {
+    display: none;
+}
+
+.course-dialog {
+    display: block;
+}
+
+.classes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: start;
+    align-content: start;
+}
+
+
+.course {
+    background-color: var(--primary-light);
+    margin: 0px;
+    border-radius: 0.5rem;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border: 1px solid black;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+.not-taken {
+    background-color: var(--border);
+}
+
+.btn-row {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.course-header {
+    display: flex;
+    background-color: var(--primary-dark);
+    padding: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+dialog {
+    width: 400px;
+    height: fit-content;
+    background-color: var(--border);
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgb(0, 0, 0 / 50%);
+    padding: 20px;
+
+}
+
+dialog button {
+    width: 2rem;
+    height: auto;
+    font-size: 1rem;
+    padding: 0px;
+}
+
+dialog::backdrop {
+    background-color: rgb(0, 0, 0 / 50%);
+    backdrop-filter: blur(10px);
+}
+
+/* === Chamber of Commerce Home Page === */
+
+.keynote-hero {
+    max-width: 1200px;
+    position: relative;
+}
+
+.keynote-hero h2 {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    bottom: 3rem;
+    background-color: var(--primarys);
+    font-size: 1.2rem;
+    border: none;
+}
+
+.keynote-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    border-bottom: solid 5px var(--primary-dark);
+    border-left: solid 5px var(--primary-dark);
+}
+
+.join-container {
+    display: block;
+    background-color: var(--primary-light);
+    border-radius: 5px;
+    border-right: solid 4px var(--primary-dark);
+    border-bottom: solid 4px var(--primary-dark);
+    padding-bottom: 1rem;
+    padding-top: 0.2rem;
+    padding-left: 0.7rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.join-container h2 {
+    background-color: var(--primary-dark);
+    border-radius: 5px;
+    border-left: solid 4px var(--primary);
+    border-bottom: solid 4px var(--primary);
+    margin-top: 1rem;
+    margin-left: 0px;
+    padding: 10px;
+
+}
+
+.join-container h3 {
+    margin-left: 0;
+    width: fit-content;
+    padding: 8px;
+    text-decoration-line: underline;
+    padding-top: 0px;
+}
+
+.join-container p {
+    padding-left: 10px;
+}
+
+
+.events h2 {
+    margin-bottom: 1rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    background-color: var(--primary-dark);
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.event-item {
+    border: solid 1px black;
+    border-radius: 1rem;
+    background-color: var(--primary);
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.weather {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.current-weather-col1 img {
+    display: block;
+    margin: 0 auto;
+}
+
+figure {
+    margin: 0px;
+}
+
+figcaption {
+    font-size: 200%;
+    text-align: center;
+    background-color: #e7e7e7;
+    border-bottom: 2px solid black;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.current-weather-col1,
+.current-weather-col2 {
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: var(--primary-light);
+    border-radius: 1rem;
+    border-left: 3px solid rgb(167, 164, 164);
+    border-bottom: 3px solid rgb(167, 164, 164);
+    flex: 1;
+}
+
+
+.current-weather-col2 p,
+.current-weather-col2 h3 {
+    margin-top: 0px;
+}
+
+.temperature {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.forecast {
+    margin: 0px auto;
+    background-color: var(--border);
+    border-radius: 1rem;
+    border-bottom: solid 2px #1f2937;
+    border-left: solid 2px #1f2937;
+    max-width: 586px;
+    min-width: 400px;
+}
+
+.forecast div p {
+    width: fit-content;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.weather-forecast {
+    padding-top: 1rem;
+    margin: 0.5rem;
+}
+
+
+.businesses {
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    background-color: var(--primary-dark);
+    border-radius: 1rem;
+    min-width: 400px;
+    max-width: 936px;
+}
+
+
+.spotlight-business,
+.premium-business {
+    background-color: var(--primary-light);
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    min-width: 300px;
+
+}
+
+.spotlight-business img,
+.premium-business img {
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.spotlight-business h2,
+.premium-business h2 {
+    background-color: var(--primary-dark);
+}
+
+.spotlight-business a:hover,
+.premium-business a:hover {
+    color: var(--primary-dark);
+}
+
+
+
+/* === Chamber of Commerce Directory Page === */
+
+
+#directory-cards.directory-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    gap: 2rem;
+}
+
+#directory-cards.directory-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#directory-cards.directory-cards-list .directory-card {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    align-items: center;
+    margin: 0px;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+}
+
+#directory-cards.directory-cards-list .directory-card img {
+    display: none;
+}
+
+#directory-cards.directory-cards-list .directory-card h2 {
+    color: black;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 10px;
+    justify-self: end;
+    text-align: right;
+}
+
+#directory-cards.directory-cards-list .directory-card .information-div {
+    display: block;
+    border-left: 3px solid black;
+    padding-left: 10px;
+    background-color: var(--primary-light);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-right: 5px solid var(--primary-dark);
+    border-bottom: 4px solid var(--primary-dark);
+    box-shadow: 1px 3px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.directory-card {
+    margin: 2rem auto;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    padding: 0.5rem;
+    background-color: var(--primary-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: solid 2px black;
+    width: 95%;
+}
+
+.directory-card h2 {
+    margin-top: 0.5rem;
+    background-color: var(--primary-dark);
+    border-bottom: 3px solid var(--primary);
+    border-left: 3px solid var(--primary);
+    width: 250px;
+}
+
+.directory-card img {
+    background-color: white;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 8px;
+}
+
+.grid-button,
+.list-button {
+    background-color: var(--bg);
+    border: none;
+}
+
+
+button img {
+    padding-top: 1rem;
+    width: 3rem;
+    height: auto;
+    cursor: pointer;
+}
+
+/* === Join Page === */
+
+.modal-cards {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.membership {
+    background-color: var(--primary-light);
+    margin-bottom: -13px;
+    padding: 0.5rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    text-align: center;
+}
+
+/* === Membership Tiers === */
+
+.non-profit {
+    border-top: solid 8px rosybrown;
+    border-left: solid 8px rosybrown;
+    box-shadow: 5px -5px 0.5rem 1px rgb(0 0 0 / 50%);
+    opacity: 0;
+    animation: fadeRiseIn 0.4s ease-out forwards;
+    animation-delay: 0.90s;
+}
+
+.bronze {
+    border-top: solid 8px burlywood;
+    border-left: solid 8px burlywood;
+    box-shadow: 5px -5px 0.5rem 1px rgb(0 0 0 / 50%);
+    opacity: 0;
+    animation: fadeRiseIn 0.4s ease-out forwards;
+    animation-delay: 0.60s;
+}
+
+.silver {
+    border-top: solid 8px silver;
+    border-left: solid 8px silver;
+    box-shadow: 5px -5px 0.5rem 1px rgb(0 0 0 / 50%);
+    opacity: 0;
+    animation: fadeRiseIn 0.4s ease-out forwards;
+    animation-delay: 0.30s;
+}
+
+.gold {
+    border-top: solid 8px var(--accent);
+    border-left: solid 8px var(--accent);
+    border-bottom: solid 8px var(--accent);
+    border-radius: 1rem;
+    box-shadow: 5px -5px 0.5rem 1px rgb(0 0 0 / 50%);
+    animation: fadeRiseIn 0.4s ease-out forwards;
+    animation-delay: 0s;
+}
+
+.np-button {
+    border: 3px solid rosybrown;
+}
+
+.bronze-button {
+    border: 3px solid burlywood;
+}
+
+.silver-button {
+    border: 3px solid silver;
+}
+
+.gold-button {
+    border: 3px solid var(--accent);
+}
+
+/* === Membership Animations */
+
+@keyframes fadeRiseIn {
+    0% {
+        opacity: 0%;
+        transform: translateY(120px);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+/* === Membership Dialog Boxes === */
+
+.membership-header {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-dark);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.membership-header h2 {
+    text-decoration: underline;
+}
+
+.membership-header button {
+    margin-top: 10px;
+}
+
+.join-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.join-content button {
+    margin-bottom: 1rem;
+}
+
+form {
+    background-color: var(--primary-light);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 0.5rem 1px rgb(0 0 0 / 50%);
+}
+
+textarea,
+select,
+input {
+    width: 98%;
+}
+
+label {
+    margin: 0.3rem;
+}
+
+/* === Thank you Page === */
+
+.results-div {
+    background-color: var(--primary-light);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    box-shadow: 0px 0px 15px 8px var(--primary);
+}
+
+/* === Discovery Page === */
+
+.location-card {
+    background-color: var(--primary-light);
+    margin: 1rem 8px;
+    border: 3px solid var(--primary-dark);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-areas:
+        "name"
+        "photo"
+        "address"
+        "description"
+        "button";
+}
+
+.location-card h2 {
+    grid-area: name;
+}
+
+.location-card figure {
+    grid-area: photo;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+}
+
+.location-card h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.location-card img {
+    grid-area: photo;
+    width: 100%;
+    margin: 0px;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.location-card address {
+    grid-area: address;
+}
+
+.location-card p {
+    grid-area: description;
+}
+
+.location-card button {
+    grid-area: button;
+}
+
+.welcome-popup {
+    display: none;
+    grid-template-columns: 1fr auto 1fr;
+    background-color: var(--border);
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-popup h3 {
+    grid-column: 2;
+    margin: 0;
+    text-align: center;
+}
+
+.welcome-popup button {
+    grid-column: 3;
+    justify-self: end;
+}
+
+
+
+
+/* ==== Footer === */
+
+footer a,
+footer li,
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-links li {
+    list-style: none;
+}
+
+.footer-links ul {
+    display: flex;
+}
+
+.footer-links img {
+    width: 4rem;
+    height: auto;
+}
+
+footer p {
+    text-align: center;
+    margin: 3px;
+}
+
+
+.completed {
+    background-color: var(--border);
+}
