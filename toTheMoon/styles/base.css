@@ -31,6 +31,8 @@ footer {
 html {
     font-family: var(--font);
     background-color: var(--background-light);
+    max-width: 65rem;
+    margin: 0 auto;
 }
 
 
@@ -120,21 +122,16 @@ html {
 .hamburger-button::before {
     content: "\2630";
     font-size: 2rem;
-    border: none;
 }
 
 .hamburger-button.show::before {
     content: "\00D7";
-    border: none;
 }
-
-
 
 .nav-grid {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas:
-        "logo nav blank"
         "logo btc-price btc-price";
     position: relative;
 }
@@ -162,6 +159,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 3px;
+    border: 0;
 
     max-height: 0;
     overflow: hidden;
@@ -169,13 +167,23 @@ nav {
     margin-top: 0px;
 
     transition:
-        max-height 0.3s ease,
-        padding 0.3s ease;
+        max-height 0.4s ease,
+        padding 0.4s ease,
+        margin 0.4s ease,
+        background-color 0.4s ease,
+        border 0.4s ease-in-out,
+        border-radius 0.4s ease-in-out;
 }
 
 .nav-bar.open {
     max-height: 200px;
-    padding: 0.5rem 0;
+    background-color: var(--money-green1);
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 1px solid;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
 }
 
 .btc-price-span {
@@ -189,11 +197,18 @@ nav {
 
 .nav-page {
     display: block;
-    background-color: var(--accent-2);
+    background-color: var(--accent-1);
     border: none;
     font-family: var(--font);
     cursor: pointer;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 1px solid black;
 }
+
+
 
 .main-h1 {
     margin: 1rem;
