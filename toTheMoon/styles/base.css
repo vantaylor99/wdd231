@@ -8,20 +8,6 @@
     --money-green2: #387E4D;
     --text-light: #E7E9EB;
 
-
-
-
-
-
-    /*             <p class="background"><strong>Background: </strong>#1B263B</p>
-            <p class="light-background"><strong>Light Background Sections: </strong>#F0FBFD</p>
-            <p class="accent-1"><strong>Accent 1: </strong>#C8F5F9</p>
-            <p class="accent-2"><strong>Accent 2: </strong>#FCE68F</p>
-            <p class="money-green1"><strong>Money Green 1: </strong>#A3D181</p>
-            <p class="money-green2"><strong>Money Green 2: </strong>#387E4D</p>
-            <p class="text-light"><strong>Text Light: </strong>#E7E9EB</p> */
-
-
     --font: "Montserrat",
         system-ui,
         -apple-system,
@@ -33,19 +19,20 @@
 }
 
 body {
-    margin: 0 auto;
+    margin: 0px;
 }
 
 nav,
 main,
 footer {
-    margin: 0.5rem;
+    margin: 0px;
 }
 
 html {
     font-family: var(--font);
     background-color: var(--background-light);
 }
+
 
 .background-dark {
     padding: 1rem;
@@ -98,16 +85,50 @@ html {
     border-radius: 1rem;
 }
 
-.main-title {
+.main-title-div {
+    display: grid;
+    grid-template-areas:
+        "blank title hamburger";
+    grid-template-columns: 1fr 2fr 1fr;
     background-color: var(--background-dark);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    width: 100%;
-    margin: 0px auto;
-    padding: 0.5rem;
     color: var(--text-light);
     text-align: center;
+    position: relative;
+    border-bottom: 3px solid var(--money-green1);
 }
+
+.main-title {
+    grid-area: title;
+}
+
+.hamburger-button {
+    grid-area: hamburger;
+    position: absolute;
+    background-color: var(--accent-2);
+    border: none;
+    border-radius: 0 0 0.8rem 0.8rem;
+    right: 1rem;
+    bottom: -3rem;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hamburger-button::before {
+    content: "\2630";
+    font-size: 2rem;
+    border: none;
+}
+
+.hamburger-button.show::before {
+    content: "\00D7";
+    border: none;
+}
+
+
 
 .nav-grid {
     display: grid;
@@ -115,6 +136,11 @@ html {
     grid-template-areas:
         "logo nav blank"
         "logo btc-price btc-price";
+    position: relative;
+}
+
+.nav-grid button {
+    border-radius: 0.5rem;
 }
 
 .logo {
@@ -125,19 +151,6 @@ nav {
     grid-area: nav;
 }
 
-/* 
-.nav-page-home {
-    grid-area: home;
-}
-
-.nav-page-comparisons {
-    grid-area: comparisons;
-}
-
-.nav-page-history {
-    grid-area: history;
-} */
-
 .btc-price {
     grid-area: btc-price;
     text-align: left;
@@ -145,32 +158,43 @@ nav {
 }
 
 .nav-bar {
+    grid-area: nav;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 3px;
+
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin-top: 0px;
+
+    transition:
+        max-height 0.3s ease,
+        padding 0.3s ease;
 }
 
+.nav-bar.open {
+    max-height: 200px;
+    padding: 0.5rem 0;
+}
 
 .btc-price-span {
     color: var(--money-green2);
-    text-decoration: underline;
-    text-decoration-color: var(--money-green1);
+}
+
+.btc-label,
+.btc-value {
+    display: block;
 }
 
 .nav-page {
+    display: block;
     background-color: var(--accent-2);
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
     border: none;
     font-family: var(--font);
-    margin-top: -8px;
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
     cursor: pointer;
-    border-inline: 0px solid rgb(145, 145, 145);
-    transition: border-inline 0.5s;
 }
 
-.nav-page:hover {
-    border-inline: 30px solid var(--accent-2);
+.main-h1 {
+    margin: 1rem;
 }

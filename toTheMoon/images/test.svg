@@ -1,0 +1,75 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 220 130"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Dollar bill</title>
+  <desc id="desc">Flat illustration of a single green dollar bill</desc>
+
+  <!-- Outer bill shape -->
+  <rect
+    x="10"
+    y="15"
+    width="200"
+    height="100"
+    rx="10"
+    ry="10"
+    fill="#19552c"      <!-- dark border -->
+  />
+
+  <!-- Inner face of the bill -->
+  <rect
+    x="18"
+    y="23"
+    width="184"
+    height="84"
+    rx="8"
+    ry="8"
+    fill="#3b8044"      <!-- medium green -->
+  />
+
+  <!-- Lighter inner panel -->
+  <rect
+    x="32"
+    y="33"
+    width="156"
+    height="64"
+    rx="6"
+    ry="6"
+    fill="#4fad57"      <!-- light green -->
+  />
+
+  <!-- Corner decorations -->
+  <circle cx="46"  cy="47" r="10" fill="#3b8044" opacity="0.6" />
+  <circle cx="46"  cy="83" r="10" fill="#3b8044" opacity="0.6" />
+  <circle cx="174" cy="47" r="10" fill="#3b8044" opacity="0.6" />
+  <circle cx="174" cy="83" r="10" fill="#3b8044" opacity="0.6" />
+
+  <!-- Central oval -->
+  <ellipse
+    cx="110"
+    cy="65"
+    rx="32"
+    ry="22"
+    fill="#3b8044"
+    opacity="0.75"
+  />
+
+  <!-- Central "face" / symbol -->
+  <circle cx="110" cy="65" r="14" fill="#4fad57" />
+  <path
+    d="M110 52
+       c-7 0-12 4-12 10
+       0 5 3 8 9 9.5
+       l0 3.5
+       m0-26
+       l0 3
+       c7 0 12 4 12 10
+       0 5-3 8-9 9.5"
+    fill="none"
+    stroke="#19552c"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+</svg>

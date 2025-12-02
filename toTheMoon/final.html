@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To the Moon</title>
 
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/navigation.js" defer></script>
 
-    <link rel="stylesheet" href="styles/to-the-moon.css">
 </head>
 
 <body>
     <header>
-        <h1 class="main-title">To the Moon</h1>
+        <div class="main-title-div">
+            <h1 class="main-title">To the Moon</h1>
+            <button class="hamburger-button" id="hamburger-button"></button>
+        </div>
         <section class="nav-grid">
             <nav>
                 <div class="nav-bar" id="nav-bar">
@@ -21,13 +26,24 @@
                     <button class="nav-page" id="nav-pages">History</button>
                 </div>
             </nav>
+
             <img src="images/to-the-moon-logo.png" alt="to-the-moon-logo" class="logo" height="150">
-            <h2 class="btc-price">Current Price of BTC: <span id="btc-price" class="btc-price-span">$102K</span></h2>
+
+            <h2 class="btc-price" id="btc-price">
+                <span class="btc-label">Current Price of </span>
+                <span class="btc-value">BTC: <span class="btc-price-span">$102,000.00 USD</span></span>
+            </h2>
         </section>
     </header>
 
     <main>
+        <h1 class="main-h1"> How far away is BTC from <i>actually</i> reaching the moon? </h1>
 
+        <section>
+            <div>
+
+            </div>
+        </section>
     </main>
 
 </body>

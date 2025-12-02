@@ -1,0 +1,61 @@
+:root {
+
+    --background-dark: #1B263B;
+    --background-light: #F0FBFD;
+    --accent-1: #C8F5F9;
+    --accent-2: #FCE68F;
+    --money-green1: #A3D181;
+    --money-green2: #387E4D;
+    --text-light: #E7E9EB;
+
+    --font: "Montserrat",
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+@media screen and (min-width: 64rem) {
+
+    .nav-page {
+        display: flex;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        border-inline: 0px solid var(--accent-2);
+        transition: border-inline 0.5s;
+        font-family: var(--font);
+        font-size: 1rem;
+    }
+
+    .nav-page:hover {
+        border-inline: 30px solid var(--accent-2);
+    }
+
+    .btc-price-br {
+        content: "test";
+    }
+
+    .btc-label,
+    .btc-value {
+        display: inline;
+    }
+
+    .hamburger-button {
+        display: none;
+    }
+
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .nav-grid button {
+        border-radius: 0 0 1rem 1rem;
+        margin-top: -0.5rem;
+    }
+}
