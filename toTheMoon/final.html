@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/loading-bar.js" defer></script>
 
 </head>
 
@@ -41,11 +42,13 @@
     <main>
         <h1 class="main-h1"> How far away is BTC from <i>actually</i> reaching the moon? </h1>
 
-        <section>
-            <div>
-
+        <div class="loading-bar" id="loading-bar">
+            <div class="bar-inner">
+                <img src="images/bitcoin-earth.png" alt="bitcoin-earth" class="bitcoin-earth">
+                <div class="loading-bills" id="loading-bills"></div>
             </div>
-        </section>
+            <img src="images/moon.png" alt="moon" class="bitcoin-moon">
+        </div>
     </main>
 
 </body>
