@@ -1,5 +1,6 @@
-const loadingBills = document.getElementById('loading-bills');
 import { apiFetch } from "./api-fetch.mjs";
+
+const loadingBills = document.getElementById('loading-bills');
 
 const BtcApiURL =
     "https://api.coingecko.com/api/v3/simple/price" +
@@ -44,12 +45,28 @@ for (let i = 0; i < progress; i++) {
     }, (i * 100));
 }
 
-const btcData = apiFetch(BtcApiURL);
+const btcData = await apiFetch(BtcApiURL);
 
-async function calculateDistance() {
 
-    const btcData = await fetchBtcData();
-
+export function calculateLoadingBarProgress(goalData, actualData) {
+    `This is goal data: ${console.log(goalData)}`
+        `This is actual data: ${console.log(actualData)}`
+    return Math.round(actualData / goalData)
 }
 
-console.log(btcData)
+
+export function calculateDistanceInDollarHeight(distanceInKilometers) {
+    const dollarThicknessInMilimeters = 0.11
+    const dollarThicknessInMeters = (dollarThicknessInMilimeters / 1000);
+    const dollarThicknessInKilometersMeters = (dollarThicknessInMeters / 1000);
+
+    return Number(distanceInKilometers / dollarThicknessInKilometersMeters);
+}
+
+const marketCap = btcData.bitcoin.usd_market_cap;
+const distanceToMoonInDollars = calculateDistanceInDollarHeight(405500);
+
+console.log(marketCap);
+console.log(distanceToMoonInDollars);
+
+console.log(calculateLoadingBarProgress(marketCap, distanceToMoonInDollars))
