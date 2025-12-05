@@ -214,9 +214,10 @@ nav {
 .loading-bar {
     display: grid;
     grid-template-columns: 100px 1fr 100px;
-    width: 380px;
+    width: 360px;
     margin: 0 auto;
     align-items: center;
+    transform: scale();
 }
 
 
@@ -255,20 +256,17 @@ nav {
     grid-column: 3;
     margin-left: auto;
     scale: 1.15;
-    z-index: 19;
+    z-index: 21;
     position: absolute;
     right: 0px;
     bottom: 0px;
 }
 
-.loading-bar {
-    border: 1px solid red;
-}
+
 
 .dollars {
     position: relative;
     margin-left: -80px;
-    border: 1px solid red;
 }
 
 .bar-inner {
