@@ -1,7 +1,5 @@
 import { apiFetch } from "./api-fetch.mjs";
 
-const loadingBills = document.getElementById('loading-bills');
-
 const BtcApiURL =
     "https://api.coingecko.com/api/v3/simple/price" +
     "?ids=bitcoin" +
@@ -9,6 +7,15 @@ const BtcApiURL =
     "&include_market_cap=true" +
     "&include_24hr_vol=true" +
     "&x_cg_demo_api_key=CG-cZzjmKPBMGyVFXtmdGsTQ5SS";
+
+
+const maxBills = 28;
+
+const loadingBills = document.getElementById('loading-bills');
+const btcData = await apiFetch(BtcApiURL);
+
+
+
 
 
 const nationalDebtApiURL =
@@ -19,7 +26,18 @@ const nationalDebtApiURL =
 
 
 
-const progress = 28;
+const marketCap = btcData.bitcoin.usd_market_cap;
+const distanceToMoonInDollars = calculateDistanceInDollarHeight(405500);
+
+console.log(marketCap);
+console.log(distanceToMoonInDollars);
+
+const percentOfProgress = calculateLoadingBarProgress(distanceToMoonInDollars, marketCap)
+
+const progress = maxBills * percentOfProgress;
+
+console.log(progress)
+
 
 for (let i = 0; i < progress; i++) {
     const dollarDiv = document.createElement('div');
@@ -45,13 +63,12 @@ for (let i = 0; i < progress; i++) {
     }, (i * 100));
 }
 
-const btcData = await apiFetch(BtcApiURL);
 
 
 export function calculateLoadingBarProgress(goalData, actualData) {
-    `This is goal data: ${console.log(goalData)}`
-        `This is actual data: ${console.log(actualData)}`
-    return Math.round(actualData / goalData)
+    console.log(`This is goal data: ${goalData}`)
+    console.log(`This is actual data: ${actualData}`)
+    return ((actualData / goalData).toFixed(3))
 }
 
 
@@ -60,13 +77,8 @@ export function calculateDistanceInDollarHeight(distanceInKilometers) {
     const dollarThicknessInMeters = (dollarThicknessInMilimeters / 1000);
     const dollarThicknessInKilometersMeters = (dollarThicknessInMeters / 1000);
 
-    return Number(distanceInKilometers / dollarThicknessInKilometersMeters);
+    return distanceInKilometers / dollarThicknessInKilometersMeters;
 }
 
-const marketCap = btcData.bitcoin.usd_market_cap;
-const distanceToMoonInDollars = calculateDistanceInDollarHeight(405500);
 
-console.log(marketCap);
-console.log(distanceToMoonInDollars);
 
-console.log(calculateLoadingBarProgress(marketCap, distanceToMoonInDollars))
