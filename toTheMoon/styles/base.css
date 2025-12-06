@@ -44,14 +44,21 @@ html {
     padding: 1rem;
     background-color: var(--background-dark);
     color: var(--text-light);
-    border: solid 3px black;
+    border: solid 3px var(--accent-1);
     border-radius: 1rem;
 }
 
 .background-light {
     padding: 1rem;
     background-color: var(--background-light);
-    border: solid 3px black;
+    border: solid 3px var(--background-dark);
+    border-radius: 1rem;
+}
+
+.background-light-blue {
+    padding: 1rem;
+    background-color: var(--accent-1);
+    border: solid 3px var(--background-dark);
     border-radius: 1rem;
 }
 
@@ -283,4 +290,9 @@ nav {
     flex: 0 0 280px;
     display: flex;
     align-items: center;
+}
+
+.conclusion {
+    text-align: center;
+    font-size: 2rem;
 }
