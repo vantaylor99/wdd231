@@ -20,6 +20,7 @@
 
 body {
     margin: 0px;
+    min-width: 300px;
 }
 
 nav,
@@ -51,13 +52,6 @@ html {
 .background-light {
     padding: 1rem;
     background-color: var(--background-light);
-    border: solid 3px var(--background-dark);
-    border-radius: 1rem;
-}
-
-.background-light-blue {
-    padding: 1rem;
-    background-color: var(--accent-1);
     border: solid 3px var(--background-dark);
     border-radius: 1rem;
 }
@@ -191,7 +185,7 @@ nav {
 
 .nav-bar.open {
     max-height: 200px;
-    background-color: var(--money-green1);
+    background-color: var(--background-dark);
     border-radius: 1rem;
     padding: 1rem;
     border: 1px solid;

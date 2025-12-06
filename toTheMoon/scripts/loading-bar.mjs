@@ -27,10 +27,10 @@ distanceToMoonInDollarsSpan.innerHTML = `<strong>${toUSDollarDisplay(distanceToM
 
 const percentOfProgress = calculateLoadingBarProgress(distanceToMoonInDollars, marketCap)
 
-const maxBills = 28;
+const maxBills = 24;
 const progress = maxBills * percentOfProgress;
 
-for (let i = 0; i < progress; i++) {
+for (let i = 0; i < Math.floor(progress); i++) {
     const dollarDiv = document.createElement('div');
     dollarDiv.classList.add(`dollars`);
     dollarDiv.classList.add(`dollar-div${i + 1}`);

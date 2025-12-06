@@ -65,4 +65,9 @@
         border-radius: 0 0 1rem 1rem;
         margin-top: -0.5rem;
     }
+
+    .loading-bar {
+        scale: 2;
+        margin: 3rem auto;
+    }
 }
