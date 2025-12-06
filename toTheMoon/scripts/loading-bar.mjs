@@ -1,4 +1,8 @@
 import { apiFetch } from "./api-fetch.mjs";
+import { getMoonData } from "./moon-distance-data.mjs";
+import { getNationalDebtData } from "./national-debt-data.mjs";
+import { toUSDollarDisplay } from "./us-dollar-display.mjs";
+
 
 const BtcApiURL =
     "https://api.coingecko.com/api/v3/simple/price" +
@@ -8,42 +12,28 @@ const BtcApiURL =
     "&include_24hr_vol=true" +
     "&x_cg_demo_api_key=CG-cZzjmKPBMGyVFXtmdGsTQ5SS";
 
-
-const maxBills = 28;
-
 const loadingBills = document.getElementById('loading-bills');
+
 const btcData = await apiFetch(BtcApiURL);
-
-
-
-
-
-const nationalDebtApiURL =
-    "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny" +
-    "?fields=record_date,tot_pub_debt_out_amt" +
-    "&sort=-record_date" +
-    "&page[size]=1";
-
-
-
 const marketCap = btcData.bitcoin.usd_market_cap;
-const distanceToMoonInDollars = calculateDistanceInDollarHeight(405500);
 
-console.log(marketCap);
-console.log(distanceToMoonInDollars);
+const moonData = await getMoonData();
+const currentMoonDistance = moonData.moon_distance;
+const distanceToMoonInDollars = calculateDistanceInDollarHeight(currentMoonDistance);
+const distanceToMoonInDollarsSpan = document.getElementById('current-distance-to-moon');
+distanceToMoonInDollarsSpan.innerHTML = `<strong>${toUSDollarDisplay(distanceToMoonInDollars)}</strong>`
+
+
 
 const percentOfProgress = calculateLoadingBarProgress(distanceToMoonInDollars, marketCap)
 
+const maxBills = 28;
 const progress = maxBills * percentOfProgress;
-
-console.log(progress)
-
 
 for (let i = 0; i < progress; i++) {
     const dollarDiv = document.createElement('div');
     dollarDiv.classList.add(`dollars`);
     dollarDiv.classList.add(`dollar-div${i + 1}`);
-    console.log(dollarDiv.className);
 
     const dollarSVG = document.createElement('img');
     dollarSVG.setAttribute("src", "images/svgs/dollar-bills.svg");
@@ -53,9 +43,6 @@ for (let i = 0; i < progress; i++) {
     const zIndex = i - 2;
     dollarSVG.style.zIndex = zIndex;
 
-    console.log(dollarSVG.style.zIndex)
-
-
     loadingBills.appendChild(dollarDiv);
     setTimeout(() => {
         dollarDiv.appendChild(dollarSVG);
@@ -63,14 +50,17 @@ for (let i = 0; i < progress; i++) {
     }, (i * 100));
 }
 
+const progressSpan = document.getElementById('progress');
+progressSpan.innerHTML = `<strong>${percentOfProgress * 100}%</strong>`
+
+const btcDistanceDifferenceInUSD = document.getElementById('btc-distance-difference-to-moon');
+btcDistanceDifferenceInUSD.innerHTML = `<strong>${toUSDollarDisplay((1 - percentOfProgress) * distanceToMoonInDollars)}</strong>`
+
 
 
 export function calculateLoadingBarProgress(goalData, actualData) {
-    console.log(`This is goal data: ${goalData}`)
-    console.log(`This is actual data: ${actualData}`)
     return ((actualData / goalData).toFixed(3))
 }
-
 
 export function calculateDistanceInDollarHeight(distanceInKilometers) {
     const dollarThicknessInMilimeters = 0.11

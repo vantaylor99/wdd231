@@ -11,6 +11,9 @@
     <script src="scripts/navigation.js" defer></script>
     <script type="module" src="scripts/loading-bar.mjs"></script>
     <script type="module" src="scripts/api-fetch.mjs"></script>
+    <script type="module" src="scripts/set-btc-values.mjs"></script>
+    <script type="module" src="scripts/set-moon-values.mjs"></script>
+
 
 </head>
 
@@ -35,14 +38,13 @@
 
             <h2 class="btc-price" id="btc-price">
                 <span class="btc-label">Current Price of </span>
-                <span class="btc-value">BTC: <span class="btc-price-span">$102,000.00 USD</span></span>
+                <span class="btc-value">BTC: <span class="money-span" id="btc-price-span"></span></span>
             </h2>
         </section>
     </header>
 
     <main>
         <h1 class="main-h1"> How far away is BTC from <i>actually</i> reaching the moon? </h1>
-
         <div class="loading-bar" id="loading-bar">
             <div class="bar-inner">
                 <img src="images/bitcoin-earth.png" alt="bitcoin-earth" class="bitcoin-earth">
@@ -50,6 +52,28 @@
             </div>
             <img src="images/moon.png" alt="moon" class="bitcoin-moon">
         </div>
+        <div class="progress">BTC is <span id="progress" class="money-span"></span> of the way to the
+            Moon</div>
+        <section class="copy background-light">
+            <h2>Diamond Hands to the Moon?</h2>
+            <p>Many diamond hand Reddit users claim they are taking Bitcoin to the moon. Well, funny enough, there's
+                actually a mathmatical way to measure that! Let's break it down together.</p>
+            <p>Consider the following</p>
+            <ul>
+                <li>If you were to take Bitcoins marketcap <i>(total USD in BTC)</i>, which is <span class="money-span"
+                        id="btc-marketcap-span"></span>.
+                </li>
+                <li>Then multiply that number by the height of a dollar (0.11mm), you get the distance those dollars go
+                    when
+                    stacked vertically. So currently that number is <br><span id="btc-height"></span> (Kilometers)</li>
+                <li>So how many $1 bills <i>would</i> it take to actually reach the moon? Well, the moon is currently
+                    <span id="moon-distance-span"></span> away from earth, so it would take about <span
+                        id="current-distance-to-moon" class="money-span"></span> one dollar bills to reach the moon.
+                </li>
+                <li>So that means bitoin is currently about <span id="btc-distance-difference-to-moon"
+                        class="money-span"></span> dollars away from "reaching the moon".</li>
+            </ul>
+        </section>
     </main>
 
 </body>

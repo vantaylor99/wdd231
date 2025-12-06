@@ -23,9 +23,13 @@ body {
 }
 
 nav,
-main,
 footer {
     margin: 0px;
+}
+
+
+.copy {
+    margin: 1rem;
 }
 
 html {
@@ -103,6 +107,8 @@ html {
 
 .main-title {
     grid-area: title;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .hamburger-button {
@@ -129,6 +135,7 @@ html {
 }
 
 .nav-grid {
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas:
@@ -186,7 +193,7 @@ nav {
     margin-top: 1rem;
 }
 
-.btc-price-span {
+.money-span {
     color: var(--money-green2);
 }
 
@@ -228,7 +235,10 @@ nav {
     flex: 0 0 auto;
 }
 
-
+.progress {
+    font-size: 1.2rem;
+    text-align: center;
+}
 
 
 
