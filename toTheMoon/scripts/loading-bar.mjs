@@ -1,25 +1,20 @@
-import { apiFetch } from "./api-fetch.mjs";
 import { getMoonData } from "./moon-distance-data.mjs";
-import { getNationalDebtData } from "./national-debt-data.mjs";
 import { toUSDollarDisplay } from "./us-dollar-display.mjs";
+import { kilometersToBills } from "./calculate-distances.mjs";
+import { getBtcData } from "./bitcoin-data.mjs";
 
 
-const BtcApiURL =
-    "https://api.coingecko.com/api/v3/simple/price" +
-    "?ids=bitcoin" +
-    "&vs_currencies=usd" +
-    "&include_market_cap=true" +
-    "&include_24hr_vol=true" +
-    "&x_cg_demo_api_key=CG-cZzjmKPBMGyVFXtmdGsTQ5SS";
+const btcData = await getBtcData();
+
+
 
 const loadingBills = document.getElementById('loading-bills');
 
-const btcData = await apiFetch(BtcApiURL);
 const marketCap = btcData.bitcoin.usd_market_cap;
 
 const moonData = await getMoonData();
 const currentMoonDistance = moonData.moon_distance;
-const distanceToMoonInDollars = calculateDistanceInDollarHeight(currentMoonDistance);
+const distanceToMoonInDollars = kilometersToBills(currentMoonDistance);
 const distanceToMoonInDollarsSpan = document.getElementById('current-distance-to-moon');
 distanceToMoonInDollarsSpan.innerHTML = `<strong>${toUSDollarDisplay(distanceToMoonInDollars)}</strong>`
 
@@ -51,7 +46,7 @@ for (let i = 0; i < Math.floor(progress); i++) {
 }
 
 const progressSpan = document.getElementById('progress');
-progressSpan.innerHTML = `<strong>${percentOfProgress * 100}%</strong>`
+progressSpan.innerHTML = `<strong>${(percentOfProgress * 100).toFixed(1)}%</strong>`
 
 const btcDistanceDifferenceInUSD = document.getElementById('btc-distance-difference-to-moon');
 btcDistanceDifferenceInUSD.innerHTML = `<strong>${toUSDollarDisplay((1 - percentOfProgress) * distanceToMoonInDollars)}</strong>`
@@ -62,13 +57,7 @@ export function calculateLoadingBarProgress(goalData, actualData) {
     return ((actualData / goalData).toFixed(3))
 }
 
-export function calculateDistanceInDollarHeight(distanceInKilometers) {
-    const dollarThicknessInMilimeters = 0.11
-    const dollarThicknessInMeters = (dollarThicknessInMilimeters / 1000);
-    const dollarThicknessInKilometersMeters = (dollarThicknessInMeters / 1000);
 
-    return distanceInKilometers / dollarThicknessInKilometersMeters;
-}
 
 
 

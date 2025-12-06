@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To the Moon</title>
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/api-fetch.mjs"></script>
+    <script type="module" src="scripts/set-btc-header.mjs"></script>
+    <script type="module" src="scripts/set-debt-data.mjs"></script>
+</head>
+
+<body>
+    <header>
+        <div class="main-title-div">
+            <h1 class="main-title">To the Moon 🚀🌙</h1>
+            <button class="hamburger-button" id="hamburger-button"></button>
+        </div>
+        <div class="mobile-navigation">
+            <nav>
+                <div class="nav-bar" id="nav-bar">
+                    <button onclick="location.href='index.html'" class="nav-page" id="nav-pages">Home</button>
+                    <button onclick="location.href='comparisons.html'" class="nav-page"
+                        id="nav-pages">Comparisons</button>
+                    <button onclick="location.href='history.html'" class="nav-page" id="nav-pages">History</button>
+                </div>
+            </nav>
+        </div>
+        <section class="nav-grid">
+
+            <img src="images/to-the-moon-logo.png" alt="to-the-moon-logo" class="logo" height="150">
+
+            <h2 class="btc-price" id="btc-price">
+                <span class="btc-label">Current Price of </span>
+                <span class="btc-value">BTC: <span class="money-span" id="btc-price-span"></span></span>
+            </h2>
+        </section>
+    </header>
+
+    <main>
+        <h1 class="copy background-dark clean-h1-center">Has anything ever reached the moon?</h1>
+        <div class="copy background-light">
+            <h2 class="clean-h2">Let's Break it Down a Bit</h2>
+            <p>Some of the numbers used to display the marketcap of bitcoin and other large numbers, like how much money
+                it would take to reach the moon, is sometimes a bit hard to imagine. So below you'll find a few other
+                numbers that are
+                much larger and will help really scale things down (or up) a bit in order to increase our understanding.
+            </p>
+        </div>
+        <div class="copy accent-1">
+            <h2 class="clean-h2">The National Debt</h2>
+            <h4>The national debt is currently at <span id="national-debt-span" class="money-span"></span></h4>
+
+            <p>Let's try and put that into perspective really quickly. Would the current national debt reach the moon?
+                Yes, about <span id="national-debt-trips-to-moon"></span> times to be exact. In fact, the national debt
+                in pennies could almost reach Pluto. We are currently about <span id="pennies-to-pluto-span"></span> of
+                the way there. <i>(calculated using the current national debt and avg. distance to Pluto,
+                    5,906,380,000 km)</i>
+            </p>
+
+            <p>The way my brain works, I want to know even bigger numbers, so what if we were to take the current
+                national debt, and turn it into dollar bills, and measure how far it would stretch if you taped each
+                dollar bill to each-other using the short end? Well if you do it that way, we've already reached Pluto.
+                <span id="bill-length-to-pluto"></span> times to be exact.
+            </p>
+
+            <p>Okay last one, hang with me here. What if you were to wrap planet Earth in that same amount of money?
+                Let's see. So in order to calculate that we need Earth's circumference, (the equator) which is about
+                <strong>40,075 km</strong>.
+                Now if we divide the length of our current national debt in $1 bills, that's <span
+                    id="national-debt-length"></span> by Earth's circumference, we get how many times we could wrap the
+                Earth in dollar bills. That number is about <span id="times-earth-wrapped"></span>.
+            </p>
+            <p>So how tall would
+                that stack of money be? Let's multiply that by the height of a dollar (0.11 mm). That means the stack
+                would be about <span id="wrap-height"></span> tall. Which is roughly about <span
+                    id="wrapped-height-in-feet"></span>.
+                Basically a building that is <span id="stories-tall"></span>
+                tall. That is wild to imagine.</p>
+        </div>
+        <a href="images/national-debt.jpg" target="_blank">
+            <img class="responsive-img" src="images/national-debt.jpg" alt="national-debt-visualization">
+        </a>
+    </main>
+
+    <footer class="copy">
+        <ul class="footer-links">
+            <li><a href="https://github.com/vantaylor99?tab=repositories"><img src="images/svgs/github.svg"
+                        alt="Link to Van Taylors Github" width="1" height="1"></a></li>
+            <li><a href="https://www.linkedin.com/in/vantaylor99/"><img src="images/svgs/linkedin.svg"
+                        alt="Link to Van Taylors LinkedIn" width="1" height="1"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=xKqOKwvgOQE&t=9s"><img src="images/svgs/youtube.svg"
+                        alt="Link to Van Taylors Youtube channel." width="1" height="1"></a></li>
+        </ul>
+        <p>&#169; <span id="year"></span> 🦩Van Taylor🦩 <br>Montrose Colorado United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/get-dates.js" defer></script>
+</body>
+
+</html>

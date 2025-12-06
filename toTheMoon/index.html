@@ -26,9 +26,10 @@
         <div class="mobile-navigation">
             <nav>
                 <div class="nav-bar" id="nav-bar">
-                    <button class="nav-page" id="nav-pages">Home</button>
-                    <button class="nav-page" id="nav-pages">Comparisons</button>
-                    <button class="nav-page" id="nav-pages">History</button>
+                    <button onclick="location.href='index.html'" class="nav-page" id="nav-pages">Home</button>
+                    <button onclick="location.href='comparisons.html'" class="nav-page"
+                        id="nav-pages">Comparisons</button>
+                    <button onclick="location.href='history.html'" class="nav-page" id="nav-pages">History</button>
                 </div>
             </nav>
         </div>
@@ -44,7 +45,8 @@
     </header>
 
     <main>
-        <h1 class="main-h1 background-light-blue"> How far away is BTC from <i>actually</i> reaching the moon? </h1>
+        <h1 class="clean-h1-center background-dark home-h1"> How far away is BTC from <i>actually</i> reaching the moon?
+        </h1>
         <div class="loading-bar" id="loading-bar">
             <div class="bar-inner">
                 <img src="images/bitcoin-earth.png" alt="bitcoin-earth" class="bitcoin-earth">
@@ -83,7 +85,20 @@
             front of your eyes. Bitcoin will make it to the moon, but will you be on the ship? Or watch it pass you by?
         </p>
     </main>
+    <footer class="copy">
+        <ul class="footer-links">
+            <li><a href="https://github.com/vantaylor99?tab=repositories"><img src="images/svgs/github.svg"
+                        alt="Link to Van Taylors Github" width="1" height="1"></a></li>
+            <li><a href="https://www.linkedin.com/in/vantaylor99/"><img src="images/svgs/linkedin.svg"
+                        alt="Link to Van Taylors LinkedIn" width="1" height="1"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=xKqOKwvgOQE&t=9s"><img src="images/svgs/youtube.svg"
+                        alt="Link to Van Taylors Youtube channe." width="1" height="1"></a></li>
+        </ul>
+        <p>&#169; <span id="year"></span> 🦩Van Taylor🦩 <br>Montrose Colorado United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
 
+    <script src="scripts/get-dates.js" defer></script>
 </body>
 
 </html>

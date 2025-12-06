@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To the Moon</title>
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/api-fetch.mjs"></script>
+    <script type="module" src="scripts/set-btc-header.mjs"></script>
+    <script type="module" src="scripts/set-btc-pizza.mjs"></script>
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="main-title-div">
+            <h1 class="main-title">To the Moon 🚀🌙</h1>
+            <button class="hamburger-button" id="hamburger-button"></button>
+        </div>
+        <div class="mobile-navigation">
+            <nav>
+                <div class="nav-bar" id="nav-bar">
+                    <button onclick="location.href='index.html'" class="nav-page" id="nav-pages">Home</button>
+                    <button onclick="location.href='comparisons.html'" class="nav-page"
+                        id="nav-pages">Comparisons</button>
+                    <button onclick="location.href='history.html'" class="nav-page" id="nav-pages">History</button>
+                </div>
+            </nav>
+        </div>
+        <section class="nav-grid">
+
+            <img src="images/to-the-moon-logo.png" alt="to-the-moon-logo" class="logo" height="150">
+
+            <h2 class="btc-price" id="btc-price">
+                <span class="btc-label">Current Price of </span>
+                <span class="btc-value">BTC: <span class="money-span" id="btc-price-span"></span></span>
+            </h2>
+        </section>
+    </header>
+
+    <main>
+        <h1 class="copy background-dark clean-h1-center">What is Bitcoins History?</h1>
+        <div class="copy">
+            <h2>The Beginning</h2>
+            <p><strong>The Birth of the Idea</strong></p>
+            <ul>
+                <li><strong>October 31, 2008:</strong> Someone named Satoshi Nakamoto publishes a whitepaper titled
+                    "Bitcoin: A Peer-to-Peer Electronic Cash System</li>
+            </ul>
+            <p>What did that introduce?</p>
+            <ul>
+                <li>Decentralized money</li>
+                <li>The Blockchain</li>
+                <li>A fixed supply (21 million coins)</li>
+            </ul>
+            <p><strong>In 2009 Bitcoin is Live</strong></p>
+            <ul>
+                <li><strong>January 3rd, 2009:</strong> The first block is ever mined, this block was called the
+                    <strong>"Genesis Block".</strong>
+                </li>
+                <li><strong>January 12th, 2009:</strong> The first Bitcoin transaction in history is made. This
+                    transaction was between (Satoshi to Hal Finney).</li>
+            </ul>
+            <p>At this point in time Bitcoin still has no value, it's just some programmers who are entranced by the
+                idea running wild with their code.</p>
+            <h2>Bitcoin Has Value</h2>
+            <ul>
+                <li><strong>May 22nd, 2010:</strong> The very first transaction with Bitcoin was completed for two
+                    pizzas,
+                    in exchange for about 10,000 Bitcoins. A transaction that today would cost someone around <span
+                        id="current-btc-transaction" class="money-span"></span> to complete.</li>
+                <li>BTC begins trading on exchanges for fractions of a cent.</li>
+            </ul>
+            <p><strong>In 2011 Bitcoin had It's First Big Price Surge</strong></p>
+            <ul>
+                <li>BTC reached $1 for the first time.</li>
+                <li>Shortly after BTC hit $31, and then later crashed all the way back down to $2.</li>
+                <li>Other crypto currencies start to appear, such as Litecoin.</li>
+            </ul>
+            <p><strong>The first "bubble" of 2013</strong></p>
+            <ul>
+                <li>Bitcoin breaks <strong class="money-span">$1,000</strong> for the first time.</li>
+                <li>This was about the time when Bitcoin really had it's first wave of mainstream attentionl.</li>
+            </ul>
+            <h2>Fast Forward to the Retail Rampage of 2017</h2>
+            <p><strong>Bitcoin skyrockets to <span class="money-span">$20,000</span></strong></p>
+            <ul>
+                <li>Coinbase blows up and downloads expload.</li>
+                <li>Crypto finally has entered the global stage of awareness.</li>
+                <li>Future markets launch on CME/CBOE which was a <strong>HUGE</strong> step for institutions.</li>
+            </ul>
+            <p><strong>Off Season</strong></p>
+            <ul>
+                <li>Bitcoin crashes from <strong class="money-span">$20,000</strong> to about <strong
+                        class="money-span-red">$3,200</strong></li>
+                <li>Hundereds of projects die off.</li>
+                <li>Bitcoins critics <i>(a.k.a. boomers)</i> claimed this would be the end of Bitcoin and cryptocurrency
+                    all
+                    together.
+                </li>
+            </ul>
+            <h2>Welcoming in the "Big Boys"</h2>
+            <p><strong>The Institutional Era Begins in 2020</strong></p>
+            <ul>
+                <li><strong>Microstrategy</strong> buys Bitcoin as a treasury reserve asset.</li>
+                <li><strong>Paypal</strong> enables buying Bitcoin.</li>
+                <li>The third round of halving (second round was in 2016) reduces block rewards to about <strong>6.25
+                        BTC.</strong> </li>
+                <li>COVID money printing renews interest in hard assets (assets that can't be produced out of thin air
+                    e.g. Bitcoin).</li>
+                <li>Bitcoin climbs past <strong class="money-span">$40K</strong></li>
+            </ul>
+            <p><strong>New All-Time Highs in 2021</strong></p>
+            <ul>
+                <li><strong>Tesla buys <span class="money-span">$1.5B</span></strong> in bitcoin.</li>
+                <li>Bitcoin reaches <strong class="money-span">$69,000</strong> in November.</li>
+                <li>The first Country <i><strong>(El Salvador)</strong></i> adopts Bitcoin as <strong>legal
+                        tender.</strong></li>
+                <li></li>
+            </ul>
+            <h2>2022, an Unforgetable but Painful Year for Crypto</h2>
+            <p><strong>Crypto Starts to Collapse</strong></p>
+            <ul>
+                <li>Terra/Luna start to meltdown.</li>
+                <li>Three Arrows Capital collapses.</li>
+                <li>FTX implosion happens.</li>
+                <li>Bitcoin plummits to <strong class="money-span-red">$15,500</strong>.</li>
+            </ul>
+
+            <p><strong>Bitcoin on the Road to Recovery</strong></p>
+
+            <ul>
+                <li>In 2023 institutions start to double down on Bitcoin.</li>
+                <li>Blackrock, Fidelity, and others file for Bitcoin ETFs.</li>
+                <li>BTC climbs back above <strong class="money-span">$40K</strong>.</li>
+            </ul>
+
+            <h2>January 2024: History is Made</h2>
+
+            <p><strong>The First U.S. Bitcoin Spot ETFs were Approved</strong></p>
+
+            <ul>
+                <li>This change opened the door for investors using a <strong>standard brokerage account</strong>
+                    <i>(like Fidelity, Schwa, Ameritrade)</i> without needing to own or manage Bitcoin directly.
+                </li>
+                <li>This opened the door for <strong>"Wall Street Money"</strong> to enter the Bitcoin scene.</li>
+                <li>Investors who were previously scared of wallets, keys, or exchanges could now buy Bitcoin in a
+                    manner that they were already comfortable / famliar with.</li>
+            </ul>
+            <p><STrong>Chasing New Highs</STrong></p>
+            <ul>
+                <li>Bitcoin breaks <strong class="money-span">$73,000</strong></li>
+                <li>Block reward halves to <strong>3.125 BTC</strong></li>
+                <li>Bitcoin creeps closer to mainstream legitimacy.</li>
+            </ul>
+            <h2>Finishing 2025 Taking Profits</h2>
+            <p><strong>A 400,000 Bitcoin Sell-Off Hurt Bitcoin Bad</strong></p>
+            <ul>
+                <li>After halfing again in 2024, BTC miners earned half as much but operating costs were the same.</li>
+                <li>Fears of inflation</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="copy">
+        <ul class="footer-links">
+            <li><a href="https://github.com/vantaylor99?tab=repositories"><img src="images/svgs/github.svg"
+                        alt="Link to Van Taylors Github" width="1" height="1"></a></li>
+            <li><a href="https://www.linkedin.com/in/vantaylor99/"><img src="images/svgs/linkedin.svg"
+                        alt="Link to Van Taylors LinkedIn" width="1" height="1"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=xKqOKwvgOQE&t=9s"><img src="images/svgs/youtube.svg"
+                        alt="Link to Van Taylors Youtube channe." width="1" height="1"></a></li>
+        </ul>
+        <p>&#169; <span id="year"></span> 🦩Van Taylor🦩 <br>Montrose Colorado United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/get-dates.js" defer></script>
+</body>
+
+</html>
