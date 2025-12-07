@@ -85,7 +85,13 @@
         margin: 3rem auto;
     }
 
+    .form-div {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
     .clean-h1-center {
         max-width: fit-content;
     }
+
 }
