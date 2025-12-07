@@ -421,7 +421,7 @@ label {
     cursor: pointer;
     font-family: var(--font);
     font-weight: 600;
-    font-size: 0.8;
+    font-size: 0.8rem;
 }
 
 .membership-button:hover {
