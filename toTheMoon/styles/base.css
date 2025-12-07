@@ -187,6 +187,7 @@ nav {
     grid-area: btc-price;
     text-align: left;
     padding: 1rem;
+    align-self: center;
 }
 
 .nav-bar {
@@ -338,4 +339,9 @@ footer {
 
 .history {
     margin-bottom: 1rem;
+}
+
+.rant {
+    font-size: 2rem;
+    font-weight: 700;
 }

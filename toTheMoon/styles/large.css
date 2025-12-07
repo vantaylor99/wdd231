@@ -42,6 +42,11 @@
         content: "test";
     }
 
+    .btc-price {
+        font-size: 2rem;
+        margin-left: 2.5rem;
+    }
+
     .btc-label,
     .btc-value {
         display: inline;
