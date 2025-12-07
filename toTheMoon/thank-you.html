@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To the Moon</title>
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="images/favicon.ico">
+
+
+    <script src="scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/api-fetch.mjs"></script>
+    <script type="module" src="scripts/set-btc-header.mjs"></script>
+    <script type="module" src="scripts/thank-you.mjs"></script>
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="main-title-div">
+            <h1 class="main-title">To the Moon 🚀🌙</h1>
+            <button class="hamburger-button" id="hamburger-button"></button>
+        </div>
+        <div class="mobile-navigation">
+            <nav>
+                <div class="nav-bar" id="nav-bar">
+                    <button onclick="location.href='index.html'" class="nav-page" id="nav-pages">Home</button>
+                    <button onclick="location.href='comparisons.html'" class="nav-page"
+                        id="nav-pages">Comparisons</button>
+                    <button onclick="location.href='history.html'" class="nav-page" id="nav-pages"
+                        aria-current="page">History</button>
+                </div>
+            </nav>
+        </div>
+        <section class="nav-grid">
+
+            <img src="images/to-the-moon-logo.jpg" alt="to-the-moon-logo" class="logo" height="150" loading="lazy">
+
+            <h2 class="btc-price" id="btc-price">
+                <span class="btc-label">Current Price of </span>
+                <span class="btc-value">BTC: <span class="money-span" id="btc-price-span"></span></span>
+            </h2>
+        </section>
+    </header>
+
+    <main>
+        <div id="results" class="results-div"></div>
+    </main>
+
+    <footer class="copy">
+        <ul class="footer-links">
+            <li><a href="https://github.com/vantaylor99?tab=repositories"><img src="images/svgs/github.svg"
+                        alt="Link to Van Taylors Github" width="1" height="1" loading="lazy"></a></li>
+            <li><a href="https://www.linkedin.com/in/vantaylor99/"><img src="images/svgs/linkedin.svg"
+                        alt="Link to Van Taylors LinkedIn" width="1" height="1" loading="lazy"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=xKqOKwvgOQE&t=9s"><img src="images/svgs/youtube.svg"
+                        alt="Link to Van Taylors Youtube channel." width="1" height="1" loading="lazy"></a></li>
+        </ul>
+        <p>&#169; <span id="year"></span> 🦩Van Taylor🦩 <br>Montrose Colorado United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/get-dates.js" defer></script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
     --accent-1: #C8F5F9;
     --accent-2: #FCE68F;
     --money-green1: #A3D181;
-    --money-green2: #387E4D;
+    --money-green2: #29613a;
     --text-light: #E7E9EB;
 
     --font: "Montserrat",
@@ -34,8 +34,17 @@
         background-color: var(--accent-2);
     }
 
-    .nav-page:hover {
+    .nav-page:hover:not([aria-current="page"]) {
         border-inline: 30px solid var(--accent-2);
+    }
+
+    .nav-bar button[aria-current="page"] {
+        background-color: var(--money-green1);
+        border-inline-color: var(--money-green1);
+    }
+
+    .nav-page:hover[aria-current="page"] {
+        border-inline: 30px solid var(--money-green1);
     }
 
     .btc-price-br {
@@ -74,5 +83,9 @@
     .loading-bar {
         scale: 2;
         margin: 3rem auto;
+    }
+
+    .clean-h1-center {
+        max-width: fit-content;
     }
 }
