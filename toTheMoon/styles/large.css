@@ -38,7 +38,7 @@
         border-inline: 30px solid var(--accent-2);
     }
 
-    .nav-bar button[aria-current="page"] {
+    .nav-bar a[aria-current="page"] {
         background-color: var(--money-green1);
         border-inline-color: var(--money-green1);
     }

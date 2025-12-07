@@ -86,12 +86,17 @@ html {
     border-radius: 1rem;
 }
 
-.nav-bar button[aria-current="page"] {
+.nav-bar a[aria-current="page"] {
     background-color: var(--money-green1);
 }
 
 .nav-page:hover[aria-current="page"] {
     border-inline: 30px solid var(--money-green1);
+}
+
+a {
+    text-decoration: none;
+    color: var(--background-dark);
 }
 
 
