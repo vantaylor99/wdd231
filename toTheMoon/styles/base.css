@@ -387,7 +387,7 @@ input {
 }
 
 .form-button {
-    width: 13rem;
+    width: 15rem;
     margin: 0 auto;
     font-size: 2rem;
     font-family: var(--font);
@@ -402,7 +402,7 @@ input {
 .form-button:hover {
     background-color: var(--accent-2);
     box-shadow: 0 0 10px 5px var(--accent-1);
-    width: 15rem;
+    width: 16rem;
 
 }
 
